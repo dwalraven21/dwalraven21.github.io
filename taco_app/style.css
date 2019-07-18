@@ -26,11 +26,18 @@ body {
 
 }
 
+p {
+	padding: 0 auto;
+	margin: 0 auto;
+}
+
 h1 {
 	text-align: center;
 	font-family: 'Henny Penny', cursive;
 	background-color: #C4FA8D;
 	margin: 0;
+	font-size: 50px;
+	padding: 10px;
 
 }
 
@@ -43,6 +50,11 @@ h2 {
  margin-top: 0;
 }
 
+h3 {
+	text-align: center;
+	font-size: 20px;
+}
+
 dl {
 	background-color: #FFFDD3;
 	width: 100%;
@@ -52,7 +64,7 @@ dl {
 
 dt {
 	font-family: 'Henny Penny', cursive;
-	font-size: 18px;
+	font-size: 20px;
 	background-color: #C4FA8D;
 	width: 100%;
 	align-self: center;
@@ -61,7 +73,7 @@ dt {
 }
 
 button {
-	font-family: 'Henny Penny', cursive;
+	/* font-family: 'Henny Penny', cursive; */
 	align-self: center;
   background: #FFAD60;
   color: #000;
@@ -97,14 +109,11 @@ button:hover {
   width: 100%;
   background: #C4FA8D;
   padding: 10px;
-  border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 2px 2px #FFAD60;
 }
 .carousel-images img {
   width: 100%;
-	/* max-width: 800px; */
-  border-radius: 10px;
 	display: none;
 }
 
@@ -134,6 +143,7 @@ button:hover {
   display: flex;
   justify-content: center;
 	align-items: center;
+	flex-flow: row wrap;
 
 }
 
@@ -154,6 +164,19 @@ button:hover {
 	margin: 5px auto 0 auto;
 	padding: 10px 20px;
 	border: 1px solid black;
+
+}
+
+.display-full-name {
+  display: none;
+	flex-flow: column nowrap;
+	margin: 10px auto;
+	width: 80%;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	line-height: 25px;
 
 }
 

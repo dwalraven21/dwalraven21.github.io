@@ -12,19 +12,25 @@ const showOrHideRecipe = (recipeID, buttonID) => {
 	// If recipe is hidden the button will reveal recipe
 	if ($(event.target).parent().siblings(recipeID).css('display') === 'none') {
 			$(event.target).parent().siblings(recipeID).css('display', 'block')
-			$(event.target).parent().siblings(recipeID).css('border-bottom:', 'none')
-			$(event.target).siblings(buttonID).css('display', 'block')
+			// $(event.target).siblings(buttonID).css('display', 'block')
 			// and the button text will change to "Hide Recipe"
 			$(event.target).text("Hide Recipe")
 	// If the recipe is already showing the button will hide it
 	} else {
 			$(event.target).parent().siblings(recipeID).css('display', 'none')
-			$(event.target).parent().siblings(recipeID).css('border-bottom:', '1px solid black')
-			$(event.target).siblings(buttonID).css('display', 'none')
+			// $(event.target).siblings(buttonID).css('display', 'none')
 			// and the button text will change to "Show Recipe"
 			$(event.target).text("Show Recipe")
 	}
 }
+
+// Function to update the text field and display the new taco
+// const changeTacoDescription  = () => {
+// 	$('.display-full-name').empty()
+// 	$displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+// 	$('.display-full-name').append($displayName)
+// }
+
 
 //Function to advance the carousel of images
 
@@ -62,6 +68,8 @@ const $next = $('.next')
 
 //previous button
 const $previous = $('.previous')
+
+let $displayName = ""
 
 //================================
 // Event Listeners
@@ -114,6 +122,11 @@ $previous.on('click', () => {
 						$('#seasoning-recipe').html(data.seasoning.recipe);
 						$('#shell').html(data.shell.name);
 						$('#shell-recipe').html(data.shell.recipe);
+
+						// Diplay taco Name
+						$displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+						$('.display-full-name').append($displayName)
+
         },
         (error)=>{
             console.log(error);
@@ -127,6 +140,10 @@ $previous.on('click', () => {
 			$('#favorite').css('display', 'block')
 			// show print option
 			$('.print').css('display', 'block')
+			$('.new-recipe').css('display', 'block')
+			$('.display-full-name').css('display', 'flex')
+
+
 	})
 
 	// Show or Hide Recipes
@@ -170,6 +187,9 @@ $previous.on('click', () => {
         (data)=>{
             $('#base').html(data.base_layer.name);
 						$('#base-recipe').html(data.base_layer.recipe);
+
+						// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+
         },
         (error)=>{
             console.log(error);
@@ -184,6 +204,8 @@ $previous.on('click', () => {
         (data)=>{
 					$('#condiment').html(data.condiment.name);
 					$('#condiment-recipe').html(data.condiment.recipe);
+
+					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
         },
         (error)=>{
             console.log(error);
@@ -198,6 +220,8 @@ $previous.on('click', () => {
         (data)=>{
 					$('#mixin').html(data.mixin.name);
 					$('#mixin-recipe').html(data.mixin.recipe);
+					//
+					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
         },
         (error)=>{
             console.log(error);
@@ -212,6 +236,10 @@ $previous.on('click', () => {
 				(data)=>{
 					$('#seasoning').html(data.seasoning.name);
 					$('#seasoning-recipe').html(data.seasoning.recipe);
+
+					// $displayName.empty()
+					// $displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+					// $('.display-full-name').append($displayName)
 				},
 				(error)=>{
 						console.log(error);
@@ -226,6 +254,8 @@ $previous.on('click', () => {
 				(data)=>{
 					$('#shell').html(data.shell.name);
 					$('#shell-recipe').html(data.shell.recipe);
+
+					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
 				},
 				(error)=>{
 						console.log(error);
