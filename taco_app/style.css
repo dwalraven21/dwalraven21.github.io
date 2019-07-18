@@ -193,6 +193,10 @@ button:hover {
 	border-right:1px solid black;
 }
 
+.expand {
+	display: none;
+}
+
 .show-recipe {
 	display: none;
 }

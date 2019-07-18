@@ -6,6 +6,14 @@ $(() => {
 // Functions
 //================================
 
+const expandAll = () => {
+	if ($('.recipe').css('display') === 'none') {
+		$('.recipe').css('display', 'block')
+	} else {
+		$('.recipe').css('display', 'none')
+	}
+}
+
 // Function to show or hide the recipe for the associated Button.
 // Takes two parameters: the id for the recipe you want to display or hide and the id for the button that generates a new recipe for that specific type of ingredient. e.g. ('#base-recipe', '#new-base-button')
 const showOrHideRecipe = (recipeID, buttonID) => {
@@ -143,11 +151,13 @@ $previous.on('click', () => {
 			$('.print').css('display', 'block')
 			$('.new-recipe').css('display', 'block')
 			$('.display-full-name').css('display', 'flex')
+			$('.expand').css('display', 'block')
 
 
 	})
 
-	// Show or Hide Recipes
+
+	// Show or Hide Recipes (Individually)
 
 	// Base
 	$('#show-base-button').on('click', (event) => {
@@ -175,6 +185,14 @@ $previous.on('click', () => {
 		showOrHideRecipe('#shell-recipe', '#new-shell-button')
 	})
 
+// Show or Hide ALl Recipes
+
+$('.expand').on('click', () => {
+	event.preventDefault();
+	expandAll()
+
+})
+
 
 	// Generate New Recipes for one specifiic ingredient type
 	// Could be more DRY
@@ -190,7 +208,6 @@ $previous.on('click', () => {
 						$('#base-recipe').html(data.base_layer.recipe);
 
 						// $('.display-full-name').append($displayName)
-
         },
         (error)=>{
             console.log(error);
