@@ -69,7 +69,7 @@ const $next = $('.next')
 //previous button
 const $previous = $('.previous')
 
-let $displayName = ""
+let $displayName = $('<p>')
 
 //================================
 // Event Listeners
@@ -124,7 +124,8 @@ $previous.on('click', () => {
 						$('#shell-recipe').html(data.shell.recipe);
 
 						// Diplay taco Name
-						$displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+						$displayName.empty()
+						$displayName.text(data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
 						$('.display-full-name').append($displayName)
 
         },
@@ -188,7 +189,7 @@ $previous.on('click', () => {
             $('#base').html(data.base_layer.name);
 						$('#base-recipe').html(data.base_layer.recipe);
 
-						// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+						// $('.display-full-name').append($displayName)
 
         },
         (error)=>{
