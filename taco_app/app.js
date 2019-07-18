@@ -1,6 +1,7 @@
 $(() => {
 // console.log("up and running!");
 
+
 //================================
 // Functions
 //================================
@@ -9,43 +10,96 @@ $(() => {
 // Takes two parameters: the id for the recipe you want to display or hide and the id for the button that generates a new recipe for that specific type of ingredient. e.g. ('#base-recipe', '#new-base-button')
 const showOrHideRecipe = (recipeID, buttonID) => {
 	// If recipe is hidden the button will reveal recipe
-	if ($(event.target).siblings(recipeID).css('display') === 'none') {
-			$(event.target).siblings(recipeID).css('display', 'block')
+	if ($(event.target).parent().siblings(recipeID).css('display') === 'none') {
+			$(event.target).parent().siblings(recipeID).css('display', 'block')
 			$(event.target).siblings(buttonID).css('display', 'block')
 			// and the button text will change to "Hide Recipe"
 			$(event.target).text("Hide Recipe")
 	// If the recipe is already showing the button will hide it
 	} else {
-			$(event.target).siblings(recipeID).css('display', 'none')
+			$(event.target).parent().siblings(recipeID).css('display', 'none')
 			$(event.target).siblings(buttonID).css('display', 'none')
 			// and the button text will change to "Show Recipe"
 			$(event.target).text("Show Recipe")
 	}
 }
 
+//Function to advance the carousel of images
+
+const $advanceCarousel = () => {
+		// current image to hide
+		$currentImg.hide()
+		//check if the currentIndex is at or below the number of images. If not, reset to zero.
+		if (currentIndex < numOfImages) {
+			//we want the next image to show
+			//increment current image currentIndex
+			currentIndex++
+		} else {
+
+			currentIndex = 0
+		}
+		//change the $currentImg
+		$currentImg = $('.carousel-images').children().eq(currentIndex)
+		$currentImg.show()
+	}
+
 
 //================================
-// Starting Variables
+// GLOBAL VARS
 //================================
-// const $baseRecipe = $('#base-recipe')
-// const $condimentRecipe = $('#condiment-recipe')
-// const $mixinRecipe = $('#mixin-recipe')
-// const $seasoningRecipe = $('#seasoning-recipe')
-// const $shellRecipe = $('#shell-recipe')
+//counter var to keep track of the current image index
+let currentIndex = 0
 
+// current image Element
+let $currentImg = $('.carousel-images').children().eq(currentIndex)
+
+let numOfImages = $('.carousel-images').children().length - 1
+
+//next button
+const $next = $('.next')
+
+//previous button
+const $previous = $('.previous')
 
 //================================
 // Event Listeners
 //================================
+
+setTimeout($advanceCarousel(), 2000);
+
+$next.on('click', () => {
+	$advanceCarousel();
+})
+
+$previous.on('click', () => {
+	// we want the current image to hide
+	$currentImg.hide()
+	//check if the currentIndex is at or below the number of images. If not, reset to zero.
+	if (currentIndex !== 0) {
+		//we want the next image to show
+		//increment current image currentIndex
+		currentIndex--
+	} else {
+
+		currentIndex = numOfImages
+	}
+	//change the $currentImg
+	$currentImg = $('.carousel-images').children().eq(currentIndex)
+	$currentImg.show()
+})
 
 	// Generate All-New Taco on Generate Taco Button Click
 
 	$('#generate-taco').on('click', (event) => {
 
 		event.preventDefault();
+		$advanceCarousel();
 
 		$.ajax({
-        url:'http://taco-randomizer.herokuapp.com/random/'
+        url:'http://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+        dataType: 'json'
+
     }).then(
         (data)=>{
             $('#base').html(data.base_layer.name);
@@ -63,6 +117,8 @@ const showOrHideRecipe = (recipeID, buttonID) => {
             console.log(error);
         })
 
+			// Name of recipe should appear
+			$('.type').css('display', 'block')
 			// Show Recipe Button should appear
 			$('.show-recipe').css('display', 'block')
 	})

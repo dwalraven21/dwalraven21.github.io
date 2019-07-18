@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Taco Recipe Generator</title>
+		<!-- =========== LINKS / SCRIPTS ======== -->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Henny+Penny|Snowburst+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 		<link rel="stylesheet" href="style.css">
 		<script
 	  src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -12,54 +16,99 @@
 		</script>
 	</head>
 	<body>
+		<!-- =========== CONTAINER ======== -->
 		<div class="container">
+			<!-- =========== HEADER ======== -->
 			<div class="header">
+				<!-- Page Title -->
 				<h1>Taco Recipe Generator</h1>
+				<!-- Subtitle -->
 				<h2>Bored with your typical taco recipes? Get inspired with this recipe generator. Mix and match until you find your the taco of your dreams. Then print or save your favorite recipes.</h2>
+				<!-- =========== CAROUSEL CONTAINER ======== -->
+				<div class="carousel-container">
+					<!-- previous button -->
+					<div class="carousel-button previous">
+						<!-- from linearicons icon font -->
+						<span class="lnr lnr-chevron-left"></span>
+					</div>
+					<!-- images -->
+					<div class="carousel-images">
+						<img src="images/alexander-mils.jpg" alt="tacos">
+						<img src="images/edgar-castrejon.jpg" alt="tacos">
+						<img src="images/christine-siracusa.jpg" alt="tacos">
+						<img src="images/tai-s.jpg" alt="tacos">
+					</div>
+					<!-- next button -->
+					<div class="carousel-button next">
+						<!-- from linearicons icon font -->
+						<span class="lnr lnr-chevron-right"></span>
+					</div>
+				</div>
+
 			</div>
+			<div class="button-div">
 				<button type="button" name="button" id="generate-taco">Generate New Taco</button>
+			</div>
+
+				<!-- =========== DISPLAY RECIPES SECTION ======== -->
 				<div class="all-recipes">
 
-					<dl class="">
-
+					<dl>
+						<!-- BASE -->
 						<dt>Base</dt>
 						<dd class='type' id="base"></dd>
-						<button type="button" name="button" class='show-recipe' id='show-base-button'>Show Recipe</button>
 						<dd class='recipe'id="base-recipe"></dd>
-						<button type="button" name="button" class='new-recipe' id='new-base-button'>Try A Different Base</button>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-base-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-base-button'>Try A Different Base</button>
+						</div>
 
 
+						<!-- CONDIMENT -->
 						<dt>Condiment</dt>
 						<dd class='type' id="condiment"></dd>
-						<button type="button" name="button" class='show-recipe' id='show-condiment-button'>Show Recipe</button>
 						<dd class='recipe'id="condiment-recipe"></dd>
-						<button type="button" name="button" class='new-recipe' id='new-condiment-button'>Try A Different Condiment</button>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-condiment-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-condiment-button'>Try A Different Condiment</button>
+						</div>
 
 
+						<!-- MIX IN -->
 						<dt>Mix-In</dt>
 						<dd class='type'id="mixin"></dd>
-						<button type="button" name="button" class='show-recipe' id='show-mixin-button'>Show Recipe</button>
 						<dd class='recipe' id="mixin-recipe"></dd>
-						<button type="button" name="button" class='new-recipe'id='new-mixin-button'>Try A Different Mix-In</button>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-mixin-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe'id='new-mixin-button'>Try A Different Mix-In</button>
+						</div>
 
 
+						<!-- SEASONING -->
 						<dt>Seasoning</dt>
 						<dd class='type' id="seasoning"></dd>
-						<button type="button" name="button" class='show-recipe' id='show-seasoning-button'>Show Recipe</button>
 						<dd class='recipe'id="seasoning-recipe"></dd>
-						<button type="button" name="button" class='new-recipe'id='new-seasoning-button'>Try A Different Seasoning</button>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-seasoning-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe'id='new-seasoning-button'>Try A Different Seasoning</button>
+						</div>
 
 
+						<!-- SHELL -->
 						<dt>Shell</dt>
 						<dd class='type' id="shell"></dd>
-						<button type="button" name="button" class='show-recipe' id='show-shell-button'>Show Recipe</button>
 						<dd class='recipe' id="shell-recipe"></dd>
-						<button type="button" name="button" class='new-recipe' id='new-shell-button'>Try A Different Shell</button>
+						<div class="bottom-buttons">
+							<button type="button" name="button" class='show-recipe' id='show-shell-button'>Show Recipe</button>
+							<button type="button" name="button" class='new-recipe' id='new-shell-button'>Try A Different Shell</button>
+						</div>
+						
 
 					</dl>
 
 				</div>
 			</div>
+			<!-- =========== FOOTER ======== -->
 			<div class="footer">
 
 			</div>
