@@ -96,7 +96,7 @@ $previous.on('click', () => {
 		$advanceCarousel();
 
 		$.ajax({
-        url:'http://taco-randomizer.herokuapp.com/random/',
+        url:'https://taco-randomizer.herokuapp.com/random/',
 				type: 'GET',
         dataType: 'json'
 
