@@ -183,7 +183,7 @@ $previous.on('click', () => {
 	$('#new-base-button').on('click', (event) => {
 		event.preventDefault();
 		$.ajax({
-        url:'http://taco-randomizer.herokuapp.com/random/'
+        url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
         (data)=>{
             $('#base').html(data.base_layer.name);
@@ -200,7 +200,7 @@ $previous.on('click', () => {
 	$('#new-condiment-button').on('click', (event) => {
 		event.preventDefault();
 		$.ajax({
-        url:'http://taco-randomizer.herokuapp.com/random/'
+        url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
         (data)=>{
 					$('#condiment').html(data.condiment.name);
@@ -216,7 +216,7 @@ $previous.on('click', () => {
 	$('#new-mixin-button').on('click', (event) => {
 		event.preventDefault();
 		$.ajax({
-        url:'http://taco-randomizer.herokuapp.com/random/'
+        url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
         (data)=>{
 					$('#mixin').html(data.mixin.name);
@@ -232,7 +232,7 @@ $previous.on('click', () => {
 	$('#new-seasoning-button').on('click', (event) => {
 		event.preventDefault();
 		$.ajax({
-				url:'http://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/'
 		}).then(
 				(data)=>{
 					$('#seasoning').html(data.seasoning.name);
@@ -250,7 +250,7 @@ $previous.on('click', () => {
 	$('#new-shell-button').on('click', (event) => {
 		event.preventDefault();
 		$.ajax({
-				url:'http://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/'
 		}).then(
 				(data)=>{
 					$('#shell').html(data.shell.name);
