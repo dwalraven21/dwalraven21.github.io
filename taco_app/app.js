@@ -12,12 +12,14 @@ const showOrHideRecipe = (recipeID, buttonID) => {
 	// If recipe is hidden the button will reveal recipe
 	if ($(event.target).parent().siblings(recipeID).css('display') === 'none') {
 			$(event.target).parent().siblings(recipeID).css('display', 'block')
+			$(event.target).parent().siblings(recipeID).css('border-bottom:', 'none')
 			$(event.target).siblings(buttonID).css('display', 'block')
 			// and the button text will change to "Hide Recipe"
 			$(event.target).text("Hide Recipe")
 	// If the recipe is already showing the button will hide it
 	} else {
 			$(event.target).parent().siblings(recipeID).css('display', 'none')
+			$(event.target).parent().siblings(recipeID).css('border-bottom:', '1px solid black')
 			$(event.target).siblings(buttonID).css('display', 'none')
 			// and the button text will change to "Show Recipe"
 			$(event.target).text("Show Recipe")
@@ -121,6 +123,10 @@ $previous.on('click', () => {
 			$('.type').css('display', 'block')
 			// Show Recipe Button should appear
 			$('.show-recipe').css('display', 'block')
+			//show favorite button
+			$('#favorite').css('display', 'block')
+			// show print option
+			$('.print').css('display', 'block')
 	})
 
 	// Show or Hide Recipes
