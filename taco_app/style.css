@@ -1,0 +1,23 @@
+* {
+	border: 1px solid black;
+}
+
+body {
+	background-color: aquamarine;
+}
+
+.type {
+
+}
+
+.recipe {
+	display: none;
+}
+
+.show-recipe {
+	display: none;
+}
+
+.new-recipe {
+	display: none;
+}

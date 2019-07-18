@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Taco Recipe Generator</title>
+		<link rel="stylesheet" href="style.css">
+		<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+		<script type="text/javascript" src="app.js">
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>Taco Recipe Generator</h1>
+				<h2>Bored with your typical taco recipes? Get inspired with this recipe generator. Mix and match until you find your the taco of your dreams. Then print or save your favorite recipes.</h2>
+			</div>
+				<button type="button" name="button" id="generate-taco">Generate New Taco</button>
+				<div class="all-recipes">
+
+					<dl class="">
+
+						<dt>Base</dt>
+						<dd class='type' id="base"></dd>
+						<button type="button" name="button" class='show-recipe' id='show-base-button'>Show Recipe</button>
+						<dd class='recipe'id="base-recipe"></dd>
+						<button type="button" name="button" class='new-recipe' id='new-base-button'>Try A Different Base</button>
+
+
+						<dt>Condiment</dt>
+						<dd class='type' id="condiment"></dd>
+						<button type="button" name="button" class='show-recipe' id='show-condiment-button'>Show Recipe</button>
+						<dd class='recipe'id="condiment-recipe"></dd>
+						<button type="button" name="button" class='new-recipe' id='new-condiment-button'>Try A Different Condiment</button>
+
+
+						<dt>Mix-In</dt>
+						<dd class='type'id="mixin"></dd>
+						<button type="button" name="button" class='show-recipe' id='show-mixin-button'>Show Recipe</button>
+						<dd class='recipe' id="mixin-recipe"></dd>
+						<button type="button" name="button" class='new-recipe'id='new-mixin-button'>Try A Different Mix-In</button>
+
+
+						<dt>Seasoning</dt>
+						<dd class='type' id="seasoning"></dd>
+						<button type="button" name="button" class='show-recipe' id='show-seasoning-button'>Show Recipe</button>
+						<dd class='recipe'id="seasoning-recipe"></dd>
+						<button type="button" name="button" class='new-recipe'id='new-seasoning-button'>Try A Different Seasoning</button>
+
+
+						<dt>Shell</dt>
+						<dd class='type' id="shell"></dd>
+						<button type="button" name="button" class='show-recipe' id='show-shell-button'>Show Recipe</button>
+						<dd class='recipe' id="shell-recipe"></dd>
+						<button type="button" name="button" class='new-recipe' id='new-shell-button'>Try A Different Shell</button>
+
+					</dl>
+
+				</div>
+			</div>
+			<div class="footer">
+
+			</div>
+	</body>
+</html>
