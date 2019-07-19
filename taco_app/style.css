@@ -251,3 +251,8 @@ button:hover {
 #modal-footer {
 	text-align: right;
 }
+
+.footer {
+	text-align: center;
+	font-size: 12px;
+}
