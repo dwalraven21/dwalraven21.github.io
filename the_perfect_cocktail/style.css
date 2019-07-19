@@ -4,7 +4,8 @@ off-black: #181D26;
 blue-gray: #343840;
 camel: #A68256;
 chocolate: #59381B;
-Merlot: #731810 */
+Merlot:  #591708;
+Pinot Noir: #731810; */
 
 /* font-family: 'Darker Grotesque', sans-serif;
 font-family: 'Lobster', cursive;
@@ -13,14 +14,20 @@ font-family: 'Josefin Slab', serif; */
 
 body {
 	background-color: #181D26;
-	color: #181D26;
+	color: #A68256;
 	font-family: 'Josefin Slab', serif;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
 }
 
 h1 {
 	text-align: center;
 	font-family: 'Special Elite', cursive;
 	background-color: #731810;
+	color: #181D26;
 	margin: 0;
 	font-size: 50px;
 	padding: 30px;
@@ -32,6 +39,56 @@ h2 {
  font-size: 25px;
  line-height: 30px;
  background-color: #A68256;
+ color: #181D26;
  padding: 15px;
  margin-top: 0;
+}
+
+
+/* ======= CAROUSEL SECTION ======== */
+
+.button-div {
+	width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-container {
+  width: 100%;
+	max-width: 800px;
+  display: flex;
+  justify-content: center;
+	margin: 0 auto;
+}
+.carousel-images {
+  width: 100%;
+  background: #A68256;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px #731810;
+}
+.carousel-images img {
+  width: 100%;
+	display: none;
+}
+
+.carousel-images img:first-of-type {
+	display: block;
+}
+
+.carousel-button {
+  align-self: center;
+  background: #A68256;
+  color: #000;
+  padding: 10px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 1px 1px #731810;
+	margin: 10px;
+}
+.carousel-button:hover {
+  cursor: pointer;
+  background: #731810;
+  box-shadow: 1px 1px #59381B;
+  color: white;
 }
