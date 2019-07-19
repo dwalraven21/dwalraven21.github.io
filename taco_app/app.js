@@ -181,9 +181,9 @@ $(document).on('click', '#close', () => {
 	closeModal()
 });
 
-// $('#confirm-print').on('click', () => {
-// 	$modalText.printThis();
-// })
+$(document).on('click', '#confirm-print', () => {
+	window.print();
+})
 
 
 
