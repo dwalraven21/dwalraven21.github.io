@@ -2,6 +2,8 @@
 
 Mex-and-Match is an app that generates different recipes for each component of a taco and allows you to mix and match them to form your perfect taco recipe. Take your taco game to the next level!
 
+Link to live site:<a href="dwalraven21.github.io/taco_app/index.html">dwalraven21.github.io/taco_app/index.html</a>
+
 ## About The Project
 
 For this project, I used HTML, CSS, JavaScript, jQuery, and AJAX.
@@ -49,7 +51,7 @@ let $shell = '';
 // Generate New Recipes for one specific ingredient type
 // Condiment
 $('#new-condiment-button').on('click', () => {
-	
+
 	$.ajax({
 			url:'https://taco-randomizer.herokuapp.com/random/'
 	}).then(
