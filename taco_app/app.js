@@ -6,6 +6,8 @@ $(() => {
 // Functions
 //================================
 
+// Allows button to expand and close all recipes at once
+
 const expandAll = () => {
 	if ($('.recipe').css('display') === 'none') {
 		$('.recipe').css('display', 'block')
@@ -33,15 +35,13 @@ const showOrHideRecipe = (recipeID, buttonID) => {
 }
 
 // Function to update the text field and display the new taco
-// const changeTacoDescription  = () => {
-// 	$('.display-full-name').empty()
-// 	$displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
-// 	$('.display-full-name').append($displayName)
-// }
-
+const changeTacoDescription  = () => {
+	$displayName.empty()
+	$displayName.text($base + ", with " + $condiment + ", garnished with " + $mixin + ", topped off with " + $seasoning + " and wrapped in delicious " + 	$shell)
+	$('.display-full-name').append($displayName)
+}
 
 //Function to advance the carousel of images
-
 const $advanceCarousel = () => {
 		// current image to hide
 		$currentImg.hide()
@@ -79,12 +79,23 @@ const $previous = $('.previous')
 
 let $displayName = $('<p>')
 
+// names of all the taco componants
+let $base = '';
+let $condiment = '';
+let $mixin = '';
+let $seasoning = '';
+let $shell = '';
+
+
 //================================
 // Event Listeners
 //================================
 
+// Tried to set up a function to advance carousel after 2 seconds
 setTimeout($advanceCarousel(), 2000);
 
+
+// Advances carousel when next button is clicked
 $next.on('click', () => {
 	$advanceCarousel();
 })
@@ -121,26 +132,29 @@ $previous.on('click', () => {
     }).then(
         (data)=>{
             $('#base').html(data.base_layer.name);
+						$base = data.base_layer.name
 						$('#base-recipe').html(data.base_layer.recipe);
             $('#condiment').html(data.condiment.name);
+						$condiment = data.condiment.name;
 						$('#condiment-recipe').html(data.condiment.recipe);
             $('#mixin').html(data.mixin.name);
+						$mixin = data.mixin.name;
 						$('#mixin-recipe').html(data.mixin.recipe);
 						$('#seasoning').html(data.seasoning.name);
+						$seasoning = data.seasoning.name
 						$('#seasoning-recipe').html(data.seasoning.recipe);
 						$('#shell').html(data.shell.name);
+						$shell = data.shell.name
 						$('#shell-recipe').html(data.shell.recipe);
 
 						// Diplay taco Name
-						$displayName.empty()
-						$displayName.text(data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
-						$('.display-full-name').append($displayName)
+						changeTacoDescription();
 
         },
         (error)=>{
             console.log(error);
         })
-
+			// When you generate the taco for the first time multiple new buttons and sections appear on the screen
 			// Name of recipe should appear
 			$('.type').css('display', 'block')
 			// Show Recipe Button should appear
@@ -149,8 +163,11 @@ $previous.on('click', () => {
 			$('#favorite').css('display', 'block')
 			// show print option
 			$('.print').css('display', 'block')
+			// show try a different recipe button
 			$('.new-recipe').css('display', 'block')
+			// show the name of the taco with all componants
 			$('.display-full-name').css('display', 'flex')
+			// show the expand /close all button
 			$('.expand').css('display', 'block')
 
 
@@ -205,9 +222,10 @@ $('.expand').on('click', () => {
     }).then(
         (data)=>{
             $('#base').html(data.base_layer.name);
+						$base = data.base_layer.name
 						$('#base-recipe').html(data.base_layer.recipe);
 
-						// $('.display-full-name').append($displayName)
+						changeTacoDescription();
         },
         (error)=>{
             console.log(error);
@@ -221,9 +239,10 @@ $('.expand').on('click', () => {
     }).then(
         (data)=>{
 					$('#condiment').html(data.condiment.name);
+					$condiment = data.condiment.name
 					$('#condiment-recipe').html(data.condiment.recipe);
 
-					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+					changeTacoDescription();
         },
         (error)=>{
             console.log(error);
@@ -237,9 +256,10 @@ $('.expand').on('click', () => {
     }).then(
         (data)=>{
 					$('#mixin').html(data.mixin.name);
+					$mixin = data.mixin.name
 					$('#mixin-recipe').html(data.mixin.recipe);
-					//
-					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+
+					changeTacoDescription();
         },
         (error)=>{
             console.log(error);
@@ -253,11 +273,10 @@ $('.expand').on('click', () => {
 		}).then(
 				(data)=>{
 					$('#seasoning').html(data.seasoning.name);
+					$seasoning = data.seasoning.name
 					$('#seasoning-recipe').html(data.seasoning.recipe);
 
-					// $displayName.empty()
-					// $displayName = $('<p>').text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
-					// $('.display-full-name').append($displayName)
+					changeTacoDescription();
 				},
 				(error)=>{
 						console.log(error);
@@ -271,13 +290,14 @@ $('.expand').on('click', () => {
 		}).then(
 				(data)=>{
 					$('#shell').html(data.shell.name);
+					$shell = data.shell.name
 					$('#shell-recipe').html(data.shell.recipe);
 
-					// $displayName.text( data.base_layer.name + " with " + data.condiment.name + " garnished with " + data.mixin.name + " topped off with " + data.seasoning.name + " and wrapped in delicious " + data.shell.name)
+					changeTacoDescription();
+					
 				},
 				(error)=>{
 						console.log(error);
 				})
 	})
-
 })
