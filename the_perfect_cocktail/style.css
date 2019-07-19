@@ -53,6 +53,13 @@ font-size: 30px;
 color: #A68256;
 }
 
+h4 {
+color: #A68256;
+width: 80%;
+padding: 0 30px;
+line-height: 25px;
+}
+
 button {
 	font-family: 'Special Elite', cursive;
 	align-self: center;
