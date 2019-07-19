@@ -1,4 +1,8 @@
 
+/* * {
+	border: 1px solid #731810;
+} */
+
 /* colors:
 off-black: #181D26;
 blue-gray: #343840;
@@ -14,7 +18,7 @@ font-family: 'Josefin Slab', serif; */
 
 body {
 	background-color: #181D26;
-	color: #A68256;
+	color: #181D26;
 	font-family: 'Josefin Slab', serif;
 	text-align: center;
 }
@@ -30,20 +34,23 @@ h1 {
 	font-family: 'Special Elite', cursive;
 	background-color: #731810;
 	color: #181D26;
-	margin: 0;
+	margin: 0 auto;
 	font-size: 50px;
-	padding: 30px;
-
+	padding: 10px;
 }
 
 h2 {
  text-align: center;
  font-size: 25px;
  line-height: 30px;
- background-color: #A68256;
  color: #181D26;
- padding: 15px;
- margin-top: 0;
+ padding: 10px;
+ margin: 0 auto;
+}
+
+h3 {
+font-size: 30px;
+color: #A68256;
 }
 
 button {
@@ -69,9 +76,15 @@ button:hover {
   color: white;
 
 }
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: #343840;
+}
 /* ======= CAROUSEL SECTION ======== */
 
-.button-div {
+/* .button-div {
 	width: 100%;
   display: flex;
   justify-content: center;
@@ -79,7 +92,7 @@ button:hover {
 
 .carousel-container {
   width: 100%;
-	max-width: 800px;
+	max-width: 600px;
   display: flex;
   justify-content: center;
 	margin: 0 auto;
@@ -115,11 +128,66 @@ button:hover {
   background: #731810;
   box-shadow: 1px 1px #59381B;
   color: white;
+} */
+
+/*  =========== HEADER ======== */
+.banner {
+	display: flex;
+	justify-content:center;
+	align-items: flex-end;
+	background-color: #731810;
+	background-image: url(images/adam-jaime-banner.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
 }
 
+.subTitle {
+	width: 100%;
+	background-color: rgba(166, 130, 86, 0.5);
+	padding: 0 10px;
+	margin: 0 auto;
+}
+/*  =========== MAIN ======== */
+
+.main {
+	margin: 5px -1px;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	width: 800;
+	margin: 5px -1px;
+}
+
+.flex-box {
+	display: flex;
+	justify-content: space-around;
+	flex-flow: row wrap;
+}
+
+.liquor {
+	display: flex;
+	flex-flow: column wrap;
+	width: 30%:
+	height: 300px;
+	background-color: white;
+	margin-right: -1px;
+	margin-bottom: 30px;
+}
+
+.liquor > img {
+	width: 210px;
+	height: 210px;
+}
+
+
+/*  =========== FOOTER ======== */
 .footer {
 	text-align: center;
 	font-size: 15px;
 	margin: 0 auto;
 	padding: 10px;
-	line-height: 24px;
+	line-height: 20px;
+	background-color: #A68256;

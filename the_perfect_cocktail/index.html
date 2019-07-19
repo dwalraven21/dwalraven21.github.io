@@ -16,22 +16,32 @@
 	</head>
 	<body>
 <!-- =========== CONTAINER ======== -->
-		<div class="container">
+<div class="container">
 <!-- =========== HEADER ======== -->
-			<div class="header">
-				<!-- Page Title -->
-				<h1>The Perfect Cocktail</h1>
-				<!-- Subtitle -->
-				<h2>Generate the perfect cocktail recipe based on your preferences</h2>
+	<div class="header">
+		<!-- ============ LOGO ============= -->
+		<div class="title">
+			<!-- Page Title -->
+			<h1>The Perfect Cocktail</h1>
+		</div>
+	</div>
+	<div class="banner">
+		<div class="subTitle">
+			<!-- Subtitle -->
+			<div class="subTitle">
+				<h2>Generate the perfect cocktail recipe based on your preferences.</h2>
+			</div>
+		</div>
+	</div>
 
 <!-- =========== CAROUSEL CONTAINER ======== -->
-				<div class="carousel-container">
-					<!-- previous button -->
+				<!-- <div class="carousel-container">
+
 					<div class="carousel-button previous">
-<!-- from linearicons icon font -->
+
 						<span class="lnr lnr-chevron-left"></span>
 					</div>
-<!-- images -->
+
 					<div class="carousel-images">
 						<img src="images/adam-jaime.jpg" alt="cocktail">
 						<img src="images/hessam-hojati.jpg" alt="cocktail">
@@ -39,27 +49,42 @@
 						<img src="images/jennifer-schmidt.jpg" alt="cocktail">
 						<img src="images/miguel-maldonado.jpg" alt="cocktail">
 					</div>
-<!-- next button -->
+
 					<div class="carousel-button next">
-<!-- from linearicons icon font -->
+
 						<span class="lnr lnr-chevron-right"></span>
 					</div>
-				</div>
-			</div>
+				</div> -->
 
 <!-- =========== MAIN ======== -->
 			<div class="main">
-
-				<h3>Choose type of liquor:</h3>
-				<button type="button" name="button">Vodka</button>
-				<button type="button" name="button">Gin</button>
-				<button type="button" name="button">Rum</button>
-				<button type="button" name="button">Tequila</button>
-				<button type="button" name="button">Whiskey</button>
-				<button type="button" name="button">Non-Alcholic</button>
-
-
-
+				<h3>Choose your favorite type of liquor:</h3>
+				<div class="flex-box">
+					<div class="liquor" id="vodka">
+						<img src="images/william-warby.jpg" alt="vodka">
+						<button type="button" name="button">Vodka</button>
+					</div>
+					<div class="liquor" id='gin'>
+						<img src="images/soul-van-schaik.jpg" alt="gin">
+						<button type="button" name="button">Gin</button>
+					</div>
+					<div class="liquor" id="rum">
+						<img src="images/malte-wingen.jpg" alt="rum">
+						<button type="button" name="button">Rum</button>
+					</div>
+					<div class="liquor" id="tequila">
+						<img src="images/fidel-fernando.jpg" alt="tequila">
+						<button type="button" name="button">Tequila</button>
+					</div>
+					<div class="liquor" id="whiskey">
+						<img src="images/jonas-kaiser.jpg" alt="whiskey">
+						<button type="button" name="button">Whiskey</button>
+					</div>
+					<div class="liquor" id="non-alcholic">
+						<img src="images/alison-marras.jpg" alt="mocktail">
+						<button type="button" name="button">Non-Alcholic</button>
+					</div>
+				</div>
 			</div>
 <!-- =========== FOOTER ======== -->
 			<div class="footer">
