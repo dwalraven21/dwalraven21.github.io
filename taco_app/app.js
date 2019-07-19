@@ -11,8 +11,10 @@ $(() => {
 const expandAll = () => {
 	if ($('.recipe').css('display') === 'none') {
 		$('.recipe').css('display', 'block')
+		$('.show-recipe').text("Hide Recipe")
 	} else {
 		$('.recipe').css('display', 'none')
+		$('.show-recipe').text("Show Recipe")
 	}
 }
 
