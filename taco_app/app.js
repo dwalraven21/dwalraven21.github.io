@@ -16,6 +16,7 @@ const expandAll = () => {
 	}
 }
 
+
 // Function to show or hide the recipe for the associated Button.
 // Takes two parameters: the id for the recipe you want to display or hide and the id for the button that generates a new recipe for that specific type of ingredient. e.g. ('#base-recipe', '#new-base-button')
 const showOrHideRecipe = (recipeID, buttonID) => {
@@ -59,6 +60,28 @@ const $advanceCarousel = () => {
 		$currentImg.show()
 	}
 
+// Event handler to open the modal
+const openModal = () => {
+// $modal.css('display', 'block');
+//Alternate Option: look up the jQuery method .show()
+$modal.show()
+}
+
+const closeModal = () => {
+// $modal.css('display', 'none');
+// look up the jQuery method .hide()
+$modal.hide()
+}
+
+// Create function that populates modal h3 with the name of recipe and the p with the full recipe
+
+const populateModal = (name, recipeID) => {
+	const $h3 = $('<h3>').text(name);
+	const $p = $('<p>').text($(event.target).parent().siblings(recipeID).text())
+	$('#modal-text').empty()
+	$('#modal-text').prepend($p)
+	$('#modal-text').prepend($h3)
+}
 
 //================================
 // GLOBAL VARS
@@ -86,13 +109,80 @@ let $mixin = '';
 let $seasoning = '';
 let $shell = '';
 
+//vars for print modal
+// var to open print modal
+const $openPrint = $('.print');
+
+// var for modal element
+const $modal = $('#modal');
+
+// var for button that closes modal
+const $closePrint = $('.close');
+
+let $modalText = $("#modal-text")
 
 //================================
-// Event Listeners
+// Event Listeners & Handlers
 //================================
 
 // Tried to set up a function to advance carousel after 2 seconds
-setTimeout($advanceCarousel(), 2000);
+// setTimeout($advanceCarousel(), 2000);
+
+//Event Listeners
+//print base recipe
+$('#print-base').on('click', (event) => {
+	event.preventDefault();
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModal($base, '#base-recipe')
+	openModal()
+
+});
+
+//print condiment recipe
+$('#print-condiment').on('click', (event) => {
+	event.preventDefault();
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModal($condiment, '#condiment-recipe')
+	openModal()
+
+});
+
+//print mixin recipe
+$('#print-mix').on('click', (event) => {
+	event.preventDefault();
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModal($mixin, '#mixin-recipe')
+	openModal()
+
+});
+
+//print seasoning recipe
+$('#print-seasoning').on('click', (event) => {
+	event.preventDefault();
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModal($seasoning, '#seasoning-recipe')
+	openModal()
+
+});
+
+//print seasoning recipe
+$('#print-shell').on('click', (event) => {
+	event.preventDefault();
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModal($shell, '#shell-recipe')
+	openModal()
+
+});
+
+//Add event listener to Close button
+$(document).on('click', '#close', () => {
+	closeModal()
+});
+
+// $('#confirm-print').on('click', () => {
+// 	$modalText.printThis();
+// })
+
 
 
 // Advances carousel when next button is clicked
@@ -154,7 +244,7 @@ $previous.on('click', () => {
         (error)=>{
             console.log(error);
         })
-			// When you generate the taco for the first time multiple new buttons and sections appear on the screen
+			// When you generate the taco for the first time, multiple new buttons and sections appear on the screen
 			// Name of recipe should appear
 			$('.type').css('display', 'block')
 			// Show Recipe Button should appear
@@ -294,7 +384,7 @@ $('.expand').on('click', () => {
 					$('#shell-recipe').html(data.shell.recipe);
 
 					changeTacoDescription();
-					
+
 				},
 				(error)=>{
 						console.log(error);

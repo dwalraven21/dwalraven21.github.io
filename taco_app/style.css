@@ -84,6 +84,7 @@ button {
 	font-size: 18px;
 	margin: 10px;
 	border: 1px solid black;
+	cursor: pointer;
 }
 
 button:hover {
@@ -137,6 +138,8 @@ button:hover {
   box-shadow: 1px 1px #FFAD60;
   color: white;
 }
+
+/* ======= Recipe Section ======== */
 
 .all-recipes {
 	width: 100%;
@@ -211,4 +214,40 @@ button:hover {
 
 .print {
 	display: none;
+}
+
+/* ======= MODAL Section ======== */
+#modal {
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	top: 0; /* I think this starts the div at the top of the page*/
+	left: 0; /* I think this starts the div at far left */
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`*/
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
+	display: none;
+	/*Set this to `none` so that the modal does not show initially on page load.*/
+
+}
+
+#modal-textbox {
+	background-color: white;
+	font-family: 'Arial';
+	height: auto;
+	width: 550px;
+	border-radius: 2px;
+	line-height: 120%;
+	padding: 2%;
+	margin: 150px auto;
+	/*This will set the margins for the top and the bottom to 150px (or larger). The right and left will automatically set themselves (and keep the box centered horizontally).*/
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	/*This will give the box some depth.*/
+
+}
+
+#modal-footer {
+	text-align: right;
 }
