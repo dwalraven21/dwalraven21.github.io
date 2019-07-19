@@ -132,8 +132,7 @@ let $modalText = $("#modal-text")
 
 //Event Listeners
 //print base recipe
-$('#print-base').on('click', (event) => {
-	event.preventDefault();
+$('#print-base').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
 	populateModal($base, '#base-recipe')
 	openModal()
@@ -141,8 +140,7 @@ $('#print-base').on('click', (event) => {
 });
 
 //print condiment recipe
-$('#print-condiment').on('click', (event) => {
-	event.preventDefault();
+$('#print-condiment').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
 	populateModal($condiment, '#condiment-recipe')
 	openModal()
@@ -150,8 +148,7 @@ $('#print-condiment').on('click', (event) => {
 });
 
 //print mixin recipe
-$('#print-mix').on('click', (event) => {
-	event.preventDefault();
+$('#print-mix').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
 	populateModal($mixin, '#mixin-recipe')
 	openModal()
@@ -159,8 +156,7 @@ $('#print-mix').on('click', (event) => {
 });
 
 //print seasoning recipe
-$('#print-seasoning').on('click', (event) => {
-	event.preventDefault();
+$('#print-seasoning').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
 	populateModal($seasoning, '#seasoning-recipe')
 	openModal()
@@ -168,8 +164,7 @@ $('#print-seasoning').on('click', (event) => {
 });
 
 //print seasoning recipe
-$('#print-shell').on('click', (event) => {
-	event.preventDefault();
+$('#print-shell').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
 	populateModal($shell, '#shell-recipe')
 	openModal()
@@ -211,9 +206,8 @@ $previous.on('click', () => {
 
 	// Generate All-New Taco on Generate Taco Button Click
 
-	$('#generate-taco').on('click', (event) => {
+	$('#generate-taco').on('click', () => {
 
-		event.preventDefault();
 		$advanceCarousel();
 
 		$.ajax({
@@ -269,35 +263,29 @@ $previous.on('click', () => {
 	// Show or Hide Recipes (Individually)
 
 	// Base
-	$('#show-base-button').on('click', (event) => {
-		event.preventDefault();
+	$('#show-base-button').on('click', () => {
 		showOrHideRecipe('#base-recipe', '#new-base-button')
 	})
 	// Condiment
-	$('#show-condiment-button').on('click', (event) => {
-		event.preventDefault();
+	$('#show-condiment-button').on('click', () => {
 		showOrHideRecipe('#condiment-recipe', '#new-condiment-button')
 	})
 	// Mixins
-	$('#show-mixin-button').on('click', (event) => {
-		event.preventDefault();
+	$('#show-mixin-button').on('click', () => {
 		showOrHideRecipe('#mixin-recipe', '#new-mixin-button')
 	})
 	// Seasoning
-	$('#show-seasoning-button').on('click', (event) => {
-		event.preventDefault();
+	$('#show-seasoning-button').on('click', () => {
 		showOrHideRecipe('#seasoning-recipe', '#new-seasoning-button')
 	})
 	// Shell
-	$('#show-shell-button').on('click', (event) => {
-		event.preventDefault();
+	$('#show-shell-button').on('click', () => {
 		showOrHideRecipe('#shell-recipe', '#new-shell-button')
 	})
 
 // Show or Hide ALl Recipes
 
 $('.expand').on('click', () => {
-	event.preventDefault();
 	expandAll()
 
 })
@@ -307,8 +295,7 @@ $('.expand').on('click', () => {
 	// Could be more DRY
 
 	//
-	$('#new-base-button').on('click', (event) => {
-		event.preventDefault();
+	$('#new-base-button').on('click', () => {
 		$.ajax({
         url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
@@ -324,8 +311,7 @@ $('.expand').on('click', () => {
         })
 	})
 	// Condiment
-	$('#new-condiment-button').on('click', (event) => {
-		event.preventDefault();
+	$('#new-condiment-button').on('click', () => {
 		$.ajax({
         url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
@@ -341,8 +327,7 @@ $('.expand').on('click', () => {
         })
 	})
 	// Mix-Ins
-	$('#new-mixin-button').on('click', (event) => {
-		event.preventDefault();
+	$('#new-mixin-button').on('click', () => {
 		$.ajax({
         url:'https://taco-randomizer.herokuapp.com/random/'
     }).then(
@@ -358,8 +343,7 @@ $('.expand').on('click', () => {
         })
 	})
 	// Seasoning
-	$('#new-seasoning-button').on('click', (event) => {
-		event.preventDefault();
+	$('#new-seasoning-button').on('click', () => {
 		$.ajax({
 				url:'https://taco-randomizer.herokuapp.com/random/'
 		}).then(
@@ -375,8 +359,8 @@ $('.expand').on('click', () => {
 				})
 	})
 	// Shell
-	$('#new-shell-button').on('click', (event) => {
-		event.preventDefault();
+	$('#new-shell-button').on('click', () => {
+
 		$.ajax({
 				url:'https://taco-randomizer.herokuapp.com/random/'
 		}).then(

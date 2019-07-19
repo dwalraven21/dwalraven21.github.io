@@ -4,13 +4,13 @@ Mex-and-Match is an app that generates different recipes for each component of a
 
 ## About The Project
 
-For this project I used HTML, CSS, JavaScript, jQuery, and AJAX.
+For this project, I used HTML, CSS, JavaScript, jQuery, and AJAX.
 
 All photos were taken from the open source library: <a href="https://unsplash.com/">unsplash.com</a>
 Photo credit goes to <a href="https://unsplash.com/@alexandermils">Alexander Mils
 </a>, <a href="Tai's Captures">Tai's Captures</a>, <a href="https://unsplash.com/@christine_siracusa">Christine Siracusa</a> and <a href="https://unsplash.com/@edgarraw">Edgar Castrejon</a>
 
-For the taco recipes I used data from the API: <a href="https://github.com/evz/tacofancy-api">tacofancy</a>
+For the taco recipes, I used data from the API: <a href="https://github.com/evz/tacofancy-api">tacofancy</a>
 
 <a href="https://github.com/evz/tacofancy-api">tacofancy</a> contains user-submitted recipes for full-tacos, base layers, mix-ins, condiments, seasoning, shells, and things that are "like tacos", but aren't technically tacos. [inserts reference to <a href="https://www.youtube.com/watch?v=KLHRjaUBb3o">SNL's "Almost Pizza" skit</a>.]
 
@@ -18,11 +18,11 @@ For the taco recipes I used data from the API: <a href="https://github.com/evz/t
 
 When users land on the page, they can click the, "Generate New Taco", button. This will populate each section (base, condiment, mix-in, seasoning, and shell) with a randomly generated recipe for that part of the taco. If the user wants to change the full taco, they can do so by clicking, "Generate New Taco", again, but if they're happy with some of the taco, they will now have the option to just change specific components by clicking, "Try A Different Base", for example.
 
-Once the user is happy with their taco, they can save it or print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example, the asian cabbage slaw, to print.
+Once the user is happy with their taco, they can save it or print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example the asian cabbage slaw, to print.
 
-I also have buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
+There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
 
-Some other fun features include a carousel, featuring taco photos (the carousel can be navigated with left and right arrow buttons, but it also advances each time the user generates a new taco) and modals, which pop up when the user decides to print a recipe.
+Some other fun features include a carousel, featuring taco photos (the carousel can be navigated with left and right arrow buttons, but it also advances each time the user generates a new taco) and modals, which pop up when the user choses to print a recipe.
 
 ## Challenges
 
@@ -48,8 +48,8 @@ let $shell = '';
 
 // Generate New Recipes for one specific ingredient type
 // Condiment
-$('#new-condiment-button').on('click', (event) => {
-	event.preventDefault();
+$('#new-condiment-button').on('click', () => {
+	
 	$.ajax({
 			url:'https://taco-randomizer.herokuapp.com/random/'
 	}).then(
