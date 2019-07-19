@@ -20,7 +20,7 @@ For the taco recipes, I used data from the API: <a href="https://github.com/evz/
 
 When users land on the page, they can click the, "Generate New Taco", button. This will populate each section (base, condiment, mix-in, seasoning, and shell) with a randomly generated recipe for that part of the taco. If the user wants to change the full taco, they can do so by clicking, "Generate New Taco", again, but if they're happy with some of the taco, they will now have the option to just change specific components by clicking, "Try A Different Base", for example.
 
-Once the user is happy with their taco, they can save it or print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example the asian cabbage slaw, to print.
+Once the user is happy with their taco, they can print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example the asian cabbage slaw, to print.
 
 There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
 

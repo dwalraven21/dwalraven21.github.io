@@ -1,0 +1,37 @@
+
+/* colors:
+off-black: #181D26;
+blue-gray: #343840;
+camel: #A68256;
+chocolate: #59381B;
+Merlot: #731810 */
+
+/* font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Lobster', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Josefin Slab', serif; */
+
+body {
+	background-color: #181D26;
+	color: #181D26;
+	font-family: 'Josefin Slab', serif;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Special Elite', cursive;
+	background-color: #731810;
+	margin: 0;
+	font-size: 50px;
+	padding: 30px;
+
+}
+
+h2 {
+ text-align: center;
+ font-size: 25px;
+ line-height: 30px;
+ background-color: #A68256;
+ padding: 15px;
+ margin-top: 0;
+}
