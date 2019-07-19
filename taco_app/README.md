@@ -2,7 +2,7 @@
 
 Mex-and-Match is an app that generates different recipes for each component of a taco and allows you to mix and match them to form your perfect taco recipe. Take your taco game to the next level!
 
-Link to live site:<a href="dwalraven21.github.io/taco_app/index.html">dwalraven21.github.io/taco_app/index.html</a>
+Link to live site: https://dwalraven21.github.io/taco_app/index.html
 
 ## About The Project
 
