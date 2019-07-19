@@ -81,7 +81,7 @@ button {
   border-radius: .5;
   text-align: center;
   box-shadow: 1px 1px #FFAD60;
-	font-size: 18px;
+	font-size: 15px;
 	margin: 10px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -209,6 +209,10 @@ button:hover {
 }
 
 #favorite {
+	display: none;
+}
+
+#print-all {
 	display: none;
 }
 

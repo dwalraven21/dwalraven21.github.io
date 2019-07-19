@@ -12,9 +12,9 @@ All photos were taken from the open source library: <a href="https://unsplash.co
 Photo credit goes to <a href="https://unsplash.com/@alexandermils">Alexander Mils
 </a>, <a href="Tai's Captures">Tai's Captures</a>, <a href="https://unsplash.com/@christine_siracusa">Christine Siracusa</a> and <a href="https://unsplash.com/@edgarraw">Edgar Castrejon</a>
 
-For the taco recipes, I used data from the API: <a href="https://github.com/evz/tacofancy-api">tacofancy</a>
+For the taco recipes, I used data from the API: <a href="https://github.com/evz/tacofancy-api">TacoFancy</a>
 
-<a href="https://github.com/evz/tacofancy-api">tacofancy</a> contains user-submitted recipes for full-tacos, base layers, mix-ins, condiments, seasoning, shells, and things that are "like tacos", but aren't technically tacos. [inserts reference to <a href="https://www.youtube.com/watch?v=KLHRjaUBb3o">SNL's "Almost Pizza" skit</a>.]
+<a href="https://github.com/evz/tacofancy-api">TacoFancy</a> contains user-submitted recipes for full-tacos, base layers, mix-ins, condiments, seasoning, shells, and things that are "like tacos", but aren't technically tacos. [inserts reference to <a href="https://www.youtube.com/watch?v=KLHRjaUBb3o">SNL's "Almost Pizza" skit</a>.]
 
 ## Usage
 
@@ -28,7 +28,7 @@ Some other fun features include a carousel, featuring taco photos (the carousel 
 
 ## Challenges
 
-This was my first solo project using an API, but luckily, I found that <a href="https://github.com/evz/tacofancy-api">tacofancy</a> was well documented and extremely easy to work with. My only suggestion would be that the author could have an object key, "protein", that contains "beef", "pork", "fish", "vegetarian" etc., as this would have allowed me to filter the recipes in some way. I originally had the idea to ask the user what protein they wanted first, but there was no realistic way for me to return recipes based on the protein source, given that the data didn't include a protein object.
+This was my first solo project using an API, but luckily, I found that <a href="https://github.com/evz/tacofancy-api">TacoFancy</a> was well documented and extremely easy to work with. My only suggestion would be that the author could have an object key, "protein", that contains "beef", "pork", "fish", "vegetarian" etc., as this would have allowed me to filter the recipes in some way. I originally had the idea to ask the user what protein they wanted first, but there was no realistic way for me to return recipes based on the protein source, given that the data didn't include a protein object.
 
 One of the trickiest problems for me to solve was how to make the full taco description dynamic, so that every time the user changed one single component, the description at the top would reflect that change, without updating the other components. I accomplished this by making the recipe names  global variables, and concatenating those variables in the sentence. That way, each time I requested another data pull, for say a condiment, I could make it so just the one variable was being updated.
 

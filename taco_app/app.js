@@ -85,6 +85,14 @@ const populateModal = (name, recipeID) => {
 	$('#modal-text').prepend($h3)
 }
 
+const populateModalPrintAll = () => {
+	const $h3 = $('<h3>').text($base + ", with " + $condiment + ", garnished with " + $mixin + ", topped off with " + $seasoning + " and wrapped in delicious " + 	$shell);
+	const $p = $('<p>').text($allRecipes)
+	$('#modal-text').empty()
+	$('#modal-text').prepend($p)
+	$('#modal-text').prepend($h3)
+}
+
 //================================
 // GLOBAL VARS
 //================================
@@ -106,10 +114,16 @@ let $displayName = $('<p>')
 
 // names of all the taco componants
 let $base = '';
+let $baseRecipe = '';
 let $condiment = '';
+let $condimentRecipe = '';
 let $mixin = '';
+let $mixinRecipe = '';
 let $seasoning = '';
+let $seasoningRecipe = '';
 let $shell = '';
+let $shellRecipe = '';
+let $allRecipes = [];
 
 //vars for print modal
 // var to open print modal
@@ -131,6 +145,14 @@ let $modalText = $("#modal-text")
 // setTimeout($advanceCarousel(), 2000);
 
 //Event Listeners
+//print all recipes
+$('#print-all').on('click', () => {
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateModalPrintAll()
+	openModal()
+
+});
+
 //print base recipe
 $('#print-base').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
@@ -220,21 +242,31 @@ $previous.on('click', () => {
             $('#base').html(data.base_layer.name);
 						$base = data.base_layer.name
 						$('#base-recipe').html(data.base_layer.recipe);
+						$baseRecipe = data.base_layer.recipe
             $('#condiment').html(data.condiment.name);
 						$condiment = data.condiment.name;
 						$('#condiment-recipe').html(data.condiment.recipe);
+						$condimentRecipe = data.condiment.recipe
             $('#mixin').html(data.mixin.name);
 						$mixin = data.mixin.name;
 						$('#mixin-recipe').html(data.mixin.recipe);
+						$mixinRecipe = data.mixin.recipe
 						$('#seasoning').html(data.seasoning.name);
 						$seasoning = data.seasoning.name
 						$('#seasoning-recipe').html(data.seasoning.recipe);
+						$seasoningRecipe = data.seasoning.recipe
 						$('#shell').html(data.shell.name);
 						$shell = data.shell.name
 						$('#shell-recipe').html(data.shell.recipe);
+						$shellRecipe = data.shell.recipe
 
 						// Diplay taco Name
 						changeTacoDescription();
+
+						$allRecipes.length = 0;
+						$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
+
+						// console.log($allRecipes);
 
         },
         (error)=>{
@@ -255,7 +287,8 @@ $previous.on('click', () => {
 			$('.display-full-name').css('display', 'flex')
 			// show the expand /close all button
 			$('.expand').css('display', 'block')
-
+			// show the print all button
+			$('#print-all').css('display', 'block')
 
 	})
 
@@ -303,8 +336,12 @@ $('.expand').on('click', () => {
             $('#base').html(data.base_layer.name);
 						$base = data.base_layer.name
 						$('#base-recipe').html(data.base_layer.recipe);
+						$baseRecipe = base_layer.recipe
 
 						changeTacoDescription();
+
+						$allRecipes.length = 0;
+						$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
         },
         (error)=>{
             console.log(error);
@@ -319,8 +356,12 @@ $('.expand').on('click', () => {
 					$('#condiment').html(data.condiment.name);
 					$condiment = data.condiment.name
 					$('#condiment-recipe').html(data.condiment.recipe);
+					$condimentRecipe = data.condiment.recipe
 
 					changeTacoDescription();
+
+					$allRecipes.length = 0;
+					$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
         },
         (error)=>{
             console.log(error);
@@ -335,8 +376,12 @@ $('.expand').on('click', () => {
 					$('#mixin').html(data.mixin.name);
 					$mixin = data.mixin.name
 					$('#mixin-recipe').html(data.mixin.recipe);
+					$mixinRecipe = data.mixin.recipe
 
 					changeTacoDescription();
+
+					$allRecipes.length = 0;
+					$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
         },
         (error)=>{
             console.log(error);
@@ -351,8 +396,14 @@ $('.expand').on('click', () => {
 					$('#seasoning').html(data.seasoning.name);
 					$seasoning = data.seasoning.name
 					$('#seasoning-recipe').html(data.seasoning.recipe);
+					$seasoningRecipe = data.seasoning.recipe
 
 					changeTacoDescription();
+
+					$allRecipes.length = 0;
+					$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
+
+
 				},
 				(error)=>{
 						console.log(error);
@@ -368,8 +419,12 @@ $('.expand').on('click', () => {
 					$('#shell').html(data.shell.name);
 					$shell = data.shell.name
 					$('#shell-recipe').html(data.shell.recipe);
+					$shellRecipe = data.shell.recipe
 
 					changeTacoDescription();
+
+					$allRecipes.length = 0;
+					$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
 
 				},
 				(error)=>{
