@@ -12,11 +12,21 @@ Photo credit goes to <a href="https://unsplash.com/@alexandermils">Alexander Mil
 
 For the taco recipes I used data from the API: <a href="https://github.com/evz/tacofancy-api">tacofancy</a>
 
-Tacofancy contains user-submitted recipes for full-tacos, base layers, mix-ins, condiments, seasoning, shells, and things that are "like tacos", but aren't technically tacos. [inserts reference to SNL's "Almost Pizza" skit.]
+<a href="https://github.com/evz/tacofancy-api">tacofancy</a> contains user-submitted recipes for full-tacos, base layers, mix-ins, condiments, seasoning, shells, and things that are "like tacos", but aren't technically tacos. [inserts reference to <a href="https://www.youtube.com/watch?v=KLHRjaUBb3o">SNL's "Almost Pizza" skit</a>.]
+
+## Usage
+
+When users land on the page, they can click the, "Generate New Taco", button. This will populate each section (base, condiment, mix-in, seasoning, and shell) with a randomly generated recipe for that part of the taco. If the user wants to change the full taco, they can do so by clicking, "Generate New Taco", again, but if they're happy with some of the taco, they will now have the option to just change specific components by clicking, "Try A Different Base", for example.
+
+Once the user is happy with their taco, they can save it or print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example, the asian cabbage slaw, to print.
+
+I also have buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
+
+Some other fun features include a carousel, featuring taco photos (the carousel can be navigated with left and right arrow buttons, but it also advances each time the user generates a new taco) and modals, which pop up when the user decides to print a recipe.
 
 ## Challenges
 
-This was my first solo project using an API, but luckily, I found that <a href="https://github.com/evz/tacofancy-api">tacofancy</a> was well documented and extremely easy to work with. My only suggestion would be that the author could have an object key, "protein", that contains "beef", "pork", "fish", "vegetarian" etc, as this would have allowed me to filter the recipes in some way. I originally had the idea to ask the user what protein they wanted first, but there was no realistic way for me to return recipes based on the protein source, given that the data didn't include a protein object.
+This was my first solo project using an API, but luckily, I found that <a href="https://github.com/evz/tacofancy-api">tacofancy</a> was well documented and extremely easy to work with. My only suggestion would be that the author could have an object key, "protein", that contains "beef", "pork", "fish", "vegetarian" etc., as this would have allowed me to filter the recipes in some way. I originally had the idea to ask the user what protein they wanted first, but there was no realistic way for me to return recipes based on the protein source, given that the data didn't include a protein object.
 
 One of the trickiest problems for me to solve was how to make the full taco description dynamic, so that every time the user changed one single component, the description at the top would reflect that change, without updating the other components. I accomplished this by making the recipe names  global variables, and concatenating those variables in the sentence. That way, each time I requested another data pull, for say a condiment, I could make it so just the one variable was being updated.
 
@@ -29,7 +39,7 @@ const changeTacoDescription  = () => {
 	$('.display-full-name').append($displayName)
 }
 
-// names of all the taco components
+// Names of all the taco components
 let $base = '';
 let $condiment = '';
 let $mixin = '';
@@ -55,13 +65,3 @@ $('#new-condiment-button').on('click', (event) => {
 			})
 })
 ```
-
-## Usage
-
-When users land on the page, they can click the "Generate New Taco" button. This will populate each section (base, condiment, mix-in, seasoning, and shell) with a randomly generated recipe for that part of the taco. If the user wants to change the full taco, they can do so by clicking "Generate New Taco" again, but if they're happy with some of the taco, they will now have the option to just change specific components by clicking, "Try A Different Base", for example.
-
-Once the user is happy with their taco, they can save it or print out all the recipes on one page. If they prefer, they can just select the one recipe they want (for example, the asian cabbage slaw), to print.
-
-I also have buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
-
-Some other fun features include a carousel, featuring taco photos (the carousel can be navigated with left and right arrow buttons, but it also advances each time the user generates a new taco) and modals, which pop up when the user decides to print a recipe.
