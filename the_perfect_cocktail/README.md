@@ -8,19 +8,14 @@ Link to live site: https://dwalraven21.github.io/the_perfect_cocktail/index.html
 
 For this project, I used HTML, CSS, JavaScript, jQuery, and AJAX.
 
-All photos were taken from the open source library: <a href="https://unsplash.com/">unsplash.com</a>
-Photo credit goes to <a href="https://unsplash.com/@arobj">Adam Jaime
-</a>,
-<a href="https://unsplash.com/@wwarby" >William-Warby</a>,
-<a href="https://unsplash.com/@soulvanschaik" >Soul van Schaik</a> ,
-<a href="https://unsplash.com/@maltewingen" >Malte Wingen</a>,
-<a href="https://unsplash.com/@fifernando" >Fidel Fernando</a>
-,
-<a href="https://unsplash.com/@kaiser1310" >Jonas Kaiser</a>
+All photos were taken from the open source library: <a href="https://unsplash.com/">unsplash.com</a>.
+Photo credit goes to <a href="https://unsplash.com/@arobj">Adam Jaime</a>,
+<a href="https://unsplash.com/@wwarby" >William-Warby</a>, <a href="https://unsplash.com/@soulvanschaik" >Soul van Schaik</a>, <a href="https://unsplash.com/@maltewingen" >Malte Wingen</a>,
+<a href="https://unsplash.com/@fifernando" >Fidel Fernando</a>, <a href="https://unsplash.com/@kaiser1310" >Jonas Kaiser</a>
 and
 <a href="https://unsplash.com/@foodbymars" >Alison Marras</a>
 
-I used data from <a href="https://www.thecocktaildb.com/api.php" >The Cocktail DB API</a>, which contains recipes and photos for hundreds of cocktails and allows for filter by type of liquor, which was essential for this project. For their Patreon supporters, this API also has an option for filtering by multiple ingredients at once. If I wanted to improve this app in the future, I might contribute, so as to have access to this feature. I would then allow the user to select favorite ingredients, in addition to favorite liquor.
+I used data from <a href="https://www.thecocktaildb.com/api.php" >The Cocktail DB API</a>, which contains recipes and photos for hundreds of cocktails and allows for filter by type of liquor, which was essential for this project. For their Patreon supporters, this API also has an option for filtering by multiple ingredients at once. If I wanted to improve this app in the future, I might contribute, so as to have access to this feature. I would then allow the user to select favorite ingredients in addition to favorite liquor.
 
 
 ## Usage
@@ -34,7 +29,7 @@ To make this more user-friendly, one improvement I might make is having a button
 
 One interesting challenge was that when you used the API filter for a specific type of liquor, it only returned objects with name of the drink, the photo and the drink ID. In order to get the full list of ingredients and the recipe, I had to save the drink ID, and then do another data pull for that drink to return the those objects.
 
-Another challenge was that in order to make the app randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two. I console logged the length of each of these arrays, to determine the range of random numbers to use for the index.
+Another challenge was that in order to make the app randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two. I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length + 1), but had an error with that for some reason.
 
 ```JavaScript
 $('#generateVodka').on('click', () => {
