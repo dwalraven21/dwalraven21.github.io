@@ -33,7 +33,7 @@ h1 {
 	text-align: center;
 	font-family: 'Special Elite', cursive;
 	background-color: #731810;
-	color: #181D26;
+	color: #fff;
 	margin: 0 auto;
 	font-size: 50px;
 	padding: 10px;
@@ -43,7 +43,6 @@ h2 {
  text-align: center;
  font-size: 25px;
  line-height: 30px;
- color: #181D26;
  padding: 10px;
  margin: 0 auto;
 }
@@ -253,7 +252,8 @@ button:hover {
 	margin: 0 auto;
 	padding: 10px;
 	line-height: 20px;
-	background-color: #A68256;
+	background-color: #000;
+	color: #A68256;
 }
 
 /*  =========== MOBILE  ======== */
@@ -262,6 +262,22 @@ button:hover {
 
 	h1 {
 		color: #fff;
+		font-size: 70px;
+	}
+
+	h2 { font-size: 30px;
+	color: #A68256;
+	}
+
+	h3 {
+		font-size: 30px;
+		color: #fff;
+
+	}
+
+	.liquor {
+		width: 45%:
+		height: 450px;
 	}
 
 	#drinkImage < img {
@@ -270,11 +286,17 @@ button:hover {
 		}
 
 	.banner {
-		height: 800px;
+		height: 500px;
+		background-image: url(images/adam-jaime.jpg);
 	}
 
 	.subTitle {
-		background-color: rgba(166, 130, 86, 1);
+		background-color: #000;
+
+	}
+
+	button {
+		font-size: 20px;
 	}
 
 
