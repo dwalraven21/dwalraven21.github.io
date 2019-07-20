@@ -274,6 +274,7 @@ button:hover {
 	text-align: right;
 }
 
+
 .footer {
 	text-align: center;
 	font-size: 14px;
@@ -328,5 +329,10 @@ button:hover {
 		font-size: 20px;
 		line-height: 35px;
 	}
+
+	#modal-text {
+		color: #000;
+	}
+
 
 }

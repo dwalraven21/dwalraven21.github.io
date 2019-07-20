@@ -279,6 +279,10 @@ button:hover {
 
 	}
 
+	h4 {
+		font-size: 30px;
+	}
+
 	.liquor {
 		width: 45%:
 		height: 500px;
@@ -307,5 +311,27 @@ button:hover {
 		width: 100%;
 	}
 
+	#modal-text > h3{
+			color: #000;
+
+		}
+
+	#modal-recipe {
+		font-size: 25px;
+		line-height: 35px;
+		width: 80%;
+		padding: 20px;
+	}
+
+	#modal-recipe > h4 {
+		padding-left: 60px;
+		text-align: center;
+	}
+
+
+	li {
+		font-size: 25px;
+		line-height: 35px;
+	}
 
 }
