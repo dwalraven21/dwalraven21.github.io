@@ -303,5 +303,9 @@ button:hover {
 		font-size: 20px;
 	}
 
+	.main {
+		width: 600px;
+	}
+
 
 }
