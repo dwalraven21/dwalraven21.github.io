@@ -247,6 +247,10 @@ button:hover {
 
 /*  =========== FOOTER ======== */
 .footer {
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-flow: column;
 	text-align: center;
 	font-size: 15px;
 	margin: 0 auto;
