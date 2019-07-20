@@ -272,7 +272,7 @@ $previous.on('click', () => {
 						$allRecipes.length = 0;
 						$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
 
-						// console.log($allRecipes);
+					// console.log(data.base_layer.name);
 
         },
         (error)=>{
@@ -336,18 +336,21 @@ $('.expand').on('click', () => {
 	//
 	$('#new-base-button').on('click', () => {
 		$.ajax({
-        url:'https://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+				dataType: 'json'
     }).then(
         (data)=>{
             $('#base').html(data.base_layer.name);
 						$base = data.base_layer.name
 						$('#base-recipe').html(data.base_layer.recipe);
-						$baseRecipe = base_layer.recipe
+						$baseRecipe = data.base_layer.recipe
 
 						changeTacoDescription();
 
 						$allRecipes.length = 0;
 						$allRecipes.push($baseRecipe, $condimentRecipe, $mixinRecipe, $seasoningRecipe, $shellRecipe)
+
         },
         (error)=>{
             console.log(error);
@@ -356,7 +359,9 @@ $('.expand').on('click', () => {
 	// Condiment
 	$('#new-condiment-button').on('click', () => {
 		$.ajax({
-        url:'https://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+				dataType: 'json'
     }).then(
         (data)=>{
 					$('#condiment').html(data.condiment.name);
@@ -376,7 +381,9 @@ $('.expand').on('click', () => {
 	// Mix-Ins
 	$('#new-mixin-button').on('click', () => {
 		$.ajax({
-        url:'https://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+				dataType: 'json'
     }).then(
         (data)=>{
 					$('#mixin').html(data.mixin.name);
@@ -396,7 +403,9 @@ $('.expand').on('click', () => {
 	// Seasoning
 	$('#new-seasoning-button').on('click', () => {
 		$.ajax({
-				url:'https://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+				dataType: 'json'
 		}).then(
 				(data)=>{
 					$('#seasoning').html(data.seasoning.name);
@@ -419,7 +428,9 @@ $('.expand').on('click', () => {
 	$('#new-shell-button').on('click', () => {
 
 		$.ajax({
-				url:'https://taco-randomizer.herokuapp.com/random/'
+				url:'https://taco-randomizer.herokuapp.com/random/',
+				type: 'GET',
+				dataType: 'json'
 		}).then(
 				(data)=>{
 					$('#shell').html(data.shell.name);
