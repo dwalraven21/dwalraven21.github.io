@@ -29,7 +29,7 @@ To make this more user-friendly, one improvement I might make is having a button
 
 One interesting challenge was that when you used the API filter for a specific type of liquor, it only returned objects with name of the drink, the photo and the drink ID. In order to get the full list of ingredients and the recipe, I had to save the drink ID, and then do another data pull for that drink to return the those objects.
 
-Another challenge was that in order to make the app randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two. I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length + 1), but had an error with that for some reason.
+Another challenge was that in order to make the app randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (Note to self: Is there a way I could pull data from "Whisky", "Bourbon", and "Scotch" and then pull data for all three into Whisky?). I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length + 1), but had an error with that for some reason.
 
 ```JavaScript
 $('#generateVodka').on('click', () => {

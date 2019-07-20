@@ -116,7 +116,7 @@ $('#generateVodka').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length) => 81
 
 			let index = (Math.floor(Math.random() * 82))
 
@@ -146,7 +146,7 @@ $('#generateGin').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length) => 93
 
 			let index = (Math.floor(Math.random() * 94))
 
@@ -175,7 +175,7 @@ $('#generateRum').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length) => 17
 
 
 			let index = (Math.floor(Math.random() * 18))
@@ -205,7 +205,7 @@ $('#generateTequila').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length) => 24
 
 			let index = (Math.floor(Math.random() * 25))
 
@@ -227,16 +227,16 @@ $('#generateTequila').on('click', () => {
 $('#generateWhiskey').on('click', () => {
 
 		$.ajax({
-			url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Whiskey',
+			url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Bourbon',
 			type: 'GET',
       dataType: 'json'
 
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length); => 12
 
-			let index = (Math.floor(Math.random() * 2))
+			let index = (Math.floor(Math.random() * 13))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -265,7 +265,7 @@ $('#generateNA').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length);
+			// console.log(data.drinks.length); => 58
 
 			let index = (Math.floor(Math.random() * 59))
 
