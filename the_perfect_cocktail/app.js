@@ -12,7 +12,7 @@ console.log("up and running!");
 	// Function to open the modal
 	const openModal = () => {
 		$modal.css('display', 'block');
-		$('#generateRecipe').text("See Recipe")
+		$('#generateRecipe').show()
 
 	}
 	// Function to close the modal
@@ -371,7 +371,7 @@ $('#generateRecipe').on('click', () => {
 				$drinkRecipe = (data.drinks[0].strInstructions)
 				$('#modal-recipe').append($drinkRecipe)
 
-				$('#generateRecipe').text("Get New Recipe")
+				$('#generateRecipe').hide()
 
 			},
 		(error)=>{
