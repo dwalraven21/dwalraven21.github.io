@@ -36,7 +36,7 @@ h1 {
 	color: #fff;
 	margin: 0 auto;
 	padding: 10px;
-	font-size: 70px;
+	font-size: 60px;
 }
 
 h2 {
@@ -128,11 +128,11 @@ button:hover {
 #modal-textbox {
 	background-color: white;
 	height: auto;
-	width: 550px;
+	width: 100%;
 	border-radius: 2px;
-	line-height: 120%;
-	padding: 2%;
-	margin: 150px auto;
+	line-height: 12px;
+	padding: 2px;
+	margin: 15px auto;
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -145,9 +145,8 @@ button:hover {
 }
 
 #drinkImage < img {
-	width: 400px;
-	height:400px;
-
+	width: 250px;
+	height:250px;
 }
 
 #modal-recipe {
@@ -257,7 +256,7 @@ button:hover {
 .liquor {
 	display: flex;
 	flex-flow: column wrap;
-	width: 45%:
+	width: 35%:
 	height: 500px;
 	background-color: white;
 	margin-right: -1px;
@@ -337,10 +336,6 @@ button:hover {
 		height: 300px;
 	}
 
-	#drinkImage < img {
-		width: 250px;
-		height:250px;
-		}
 
 	.banner {
 		height: 300px;
