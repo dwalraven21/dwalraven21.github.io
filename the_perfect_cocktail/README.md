@@ -6,7 +6,7 @@ Link to live site: https://dwalraven21.github.io/the_perfect_cocktail/index.html
 
 ## About The Project
 
-For this project, I used HTML, CSS, JavaScript, jQuery, and AJAX.
+For this project I used HTML, CSS, JavaScript, jQuery and AJAX.
 
 All photos were taken from the open source library: <a href="https://unsplash.com/">unsplash.com</a>.
 Photo credit goes to <a href="https://unsplash.com/@arobj">Adam Jaime</a>,
