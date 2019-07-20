@@ -65,6 +65,8 @@ p {
 	padding: 0 30px;
 	line-height: 25px;
 	text-align: center;
+	margin: 5px auto;
+
 }
 
 ul {
@@ -248,13 +250,13 @@ button:hover {
 /*  =========== FOOTER ======== */
 .footer {
 	display: flex;
-	justify-content:center;
 	align-items: center;
 	flex-flow: column;
 	text-align: center;
 	font-size: 15px;
+	padding-top: 10px;
 	margin: 0 auto;
-	padding: 10px;
+	/* padding: 0 10px; */
 	line-height: 20px;
 	background-color: #000;
 	color: #A68256;
@@ -332,6 +334,14 @@ button:hover {
 	li {
 		font-size: 25px;
 		line-height: 35px;
+	}
+
+	p {
+		width: 80%;
+		padding: 0 30px;
+		line-height: 25px;
+		text-align: center;
+
 	}
 
 }
