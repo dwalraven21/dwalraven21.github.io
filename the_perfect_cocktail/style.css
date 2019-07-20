@@ -58,6 +58,22 @@ color: #A68256;
 width: 80%;
 padding: 0 30px;
 line-height: 25px;
+text-align: center;
+}
+
+p {
+	width: 80%;
+	padding: 0 30px;
+	line-height: 25px;
+	text-align: center;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	text-align: left;
 }
 
 button {
@@ -115,13 +131,19 @@ button:hover {
 }
 
 #modal-footer {
-	text-align: right;
+	text-align: center;
 }
 
 #drinkImage < img {
 	width: 250px;
 	height:250px;
 }
+
+/* #modal-ingredients {
+	text-align: center;
+	width: 100px;
+
+} */
 
 /* ======= CAROUSEL SECTION ======== */
 
