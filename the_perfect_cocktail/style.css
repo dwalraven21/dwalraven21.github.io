@@ -35,21 +35,22 @@ h1 {
 	background-color: #731810;
 	color: #fff;
 	margin: 0 auto;
-	font-size: 50px;
 	padding: 10px;
+	font-size: 70px;
 }
 
 h2 {
  text-align: center;
- font-size: 25px;
  line-height: 30px;
  padding: 10px;
- margin: 0 auto;
+ margin: 5px auto;
+ font-size: 30px;
+ color: #fff;
 }
 
 h3 {
 font-size: 30px;
-color: #A68256;
+color: #fff;
 }
 
 h4 {
@@ -58,6 +59,7 @@ width: 80%;
 padding: 0 30px;
 line-height: 25px;
 text-align: center;
+font-size: 30px;
 }
 
 p {
@@ -74,7 +76,10 @@ ul {
 }
 
 li {
+	font-size: 25px;
+	line-height: 35px;
 	text-align: left;
+
 }
 
 button {
@@ -86,7 +91,7 @@ button {
   border-radius: .5;
   text-align: center;
   box-shadow: 1px 1px #731810;
-	font-size: 15px;
+	font-size: 20px;
 	margin: 10px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -131,13 +136,30 @@ button:hover {
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 
+#modal-text > h3{
+		color: #000;
+	}
+
 #modal-footer {
 	text-align: center;
 }
 
 #drinkImage < img {
-	width: 250px;
-	height:250px;
+	width: 400px;
+	height:400px;
+
+}
+
+#modal-recipe {
+	font-size: 25px;
+	line-height: 35px;
+	width: 80%;
+	padding: 20px;
+}
+
+#modal-recipe > h4 {
+	padding-left: 60px;
+	text-align: center;
 }
 
 /* #modal-ingredients {
@@ -200,17 +222,18 @@ button:hover {
 	justify-content:center;
 	align-items: flex-end;
 	background-color: #731810;
-	background-image: url(images/adam-jaime-banner.jpg);
+	height: 500px;
+	background-image: url(images/adam-jaime.jpg);
+
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
-	height: 300px;
 	margin: 0 auto;
 }
 
 .subTitle {
 	width: 100%;
-	background-color: rgba(166, 130, 86, 0.5);
+	background-color: #000;
 	padding: 0 10px;
 	margin: 0 auto;
 }
@@ -221,7 +244,7 @@ button:hover {
 	display: flex;
 	justify-content: space-around;
 	flex-flow: row wrap;
-	width: 800;
+	width: 100%;
 	margin: 5px -1px;
 }
 
@@ -234,11 +257,12 @@ button:hover {
 .liquor {
 	display: flex;
 	flex-flow: column wrap;
-	width: 30%:
-	height: 300px;
+	width: 45%:
+	height: 500px;
 	background-color: white;
 	margin-right: -1px;
 	margin-bottom: 30px;
+
 }
 
 .liquor > img {
@@ -288,22 +312,20 @@ button:hover {
 }
 
 /*  =========== MOBILE  ======== */
-@media only screen and (max-width: 768px) {
+@media (min-width: 600px) {
 
 
 	h1 {
-		color: #fff;
-		font-size: 70px;
+		font-size: 50px;
 	}
 
-	h2 { font-size: 30px;
-	color: #A68256;
+	h2 { font-size: 25px;
+		color: #fff;
 	}
 
 	h3 {
 		font-size: 30px;
-		color: #fff;
-
+		color: #A68256;
 	}
 
 	h4 {
@@ -311,36 +333,34 @@ button:hover {
 	}
 
 	.liquor {
-		width: 45%:
-		height: 500px;
+		width: 30%:
+		height: 300px;
 	}
 
 	#drinkImage < img {
-			width: 400px;
-			height:400px;
+		width: 250px;
+		height:250px;
 		}
 
 	.banner {
-		height: 500px;
-		background-image: url(images/adam-jaime.jpg);
+		height: 300px;
+		background-image: url(images/adam-jaime-banner.jpg);
 	}
 
 	.subTitle {
-		background-color: #000;
-
+		background-color: rgba(166, 130, 86, 0.5);
 	}
 
 	button {
-		font-size: 20px;
+		font-size: 15px;
 	}
 
 	.main {
-		width: 100%;
+		width: 800;
 	}
 
 	#modal-text > h3{
 			color: #000;
-
 		}
 
 	#modal-recipe {
@@ -355,18 +375,5 @@ button:hover {
 		text-align: center;
 	}
 
-
-	li {
-		font-size: 25px;
-		line-height: 35px;
-	}
-
-	p {
-		width: 80%;
-		padding: 0 30px;
-		line-height: 25px;
-		text-align: center;
-
-	}
 
 }
