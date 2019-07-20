@@ -62,6 +62,11 @@ const $advanceCarousel = () => {
 		$currentImg.show()
 	}
 
+setInterval(function(
+	){
+	$('.next').click()
+	},2000)
+
 // Event handler to open the modal
 const openModal = () => {
 // $modal.css('display', 'block');
@@ -74,6 +79,7 @@ const closeModal = () => {
 // look up the jQuery method .hide()
 $modal.hide()
 }
+
 
 // Create function that populates modal h3 with the name of recipe and the p with the full recipe
 
