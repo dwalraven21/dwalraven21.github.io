@@ -246,6 +246,31 @@ button:hover {
 	height: 210px;
 }
 
+/*  =========== MAIN TWO ======== */
+/* on click change main2 display to flex */
+/* .main2 {
+	margin: 5px -1px;
+	display: none;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	width: 800;
+	margin: 5px -1px;
+}
+
+.flavor {
+	display: flex;
+	flex-flow: column wrap;
+	width: 30%:
+	height: 300px;
+	background-color: white;
+	margin-right: -1px;
+	margin-bottom: 30px;
+}
+
+.flavor > img {
+	width: 210px;
+	height: 210px;
+}  */
 
 /*  =========== FOOTER ======== */
 .footer {
