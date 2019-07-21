@@ -144,7 +144,7 @@ $(document).on('click', '#save', () => {
 
 });
 
-if (localStorage.getItem('favDrinkName').length > 0) {
+if (localStorage.getItem('favDrinkName') !== 'undefined') {
 	$favoriteName = localStorage.getItem('favDrinkName')
 	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
 	$favoriteImage = localStorage.getItem('favDrinkPic')
