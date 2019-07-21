@@ -157,7 +157,9 @@ if (localStorage.getItem('favDrinkName').length > 0) {
 	$('.favoriteName').append($img)
 	// $('.favoriteName').append($p)
 	$('.favorite').css('display', 'block')
-	}
+} else {
+	$('.favorite').css('display', 'none')
+}
 
 // //event listener for show favorite recipe
 // $(document).on('click', '#see-favorite', () => {
