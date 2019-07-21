@@ -70,7 +70,6 @@ if (localStorage.getItem('favDrinkName') !== null) {
 		// $('#modal-text').append($p)
 		$('#generateRecipe').css('display', 'none')
 		$('#save').css('display', 'none')
-		$('.favorite').css('display', 'block')
 
 }
 
