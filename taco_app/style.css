@@ -44,15 +44,15 @@ h1 {
 	font-family: 'Henny Penny', cursive;
 	background-color: #C4FA8D;
 	margin: 0;
-	font-size: 60px;
+	font-size: 50px;
 	padding: 10px;
 
 }
 
 h2 {
  text-align: center;
- font-size: 30px;
- line-height: 30px;
+ font-size: 20px;
+ line-height: 25px;
  background-color: #FFAD60;
  padding: 15px;
  margin-top: 0;
@@ -64,7 +64,8 @@ h2 a {
 
 h3 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 20px;
+	line-height: 30px;
 }
 }
 
@@ -103,7 +104,7 @@ button {
   border-radius: .5;
   text-align: center;
   box-shadow: 1px 1px #FFAD60;
-	font-size: 30px;
+	font-size: 22px;
 	margin: 10px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -264,9 +265,13 @@ button:hover {
 
 }
 
+#modal-text {
+margin: 0 auto;
+padding: 0 10px;
+}
+
 #modal-textbox {
 	background-color: white;
-	font-family: 'Arial';
 	height: auto;
 	width: 100%;
 	max-width: 400px;;
