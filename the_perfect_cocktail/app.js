@@ -1,6 +1,27 @@
 $(() => {
 console.log("up and running!");
 
+//check local storage to see if a favorite exists
+//if it does then display it
+//if not, don't display this section yet
+
+if (localStorage.getItem('favDrinkName') !== null) {
+	$favoriteName = localStorage.getItem('favDrinkName')
+	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
+	$favoriteImage = localStorage.getItem('favDrinkPic')
+	$favoriteID = localStorage.getItem('favDrinkID')
+	$('.favoriteName').empty()
+	const $h4 = $('<h4>').text($favoriteName)
+	// const $p = $('<p>').text($favoriteRecipe)
+	const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
+	$('.favoriteName').append($h4)
+	$('.favoriteName').append($img)
+	// $('.favoriteName').append($p)
+	$('.favorite').css('display', 'block')
+} else {
+	$('.favorite').css('display', 'none')
+}
+
 //I commented out the carousel code, because I decided to try a different style for the header. I may go back later and make the new a header a carousel. Just in case I want to put the carousel back in, I decided to keep the code.
 
 //================================
@@ -144,22 +165,7 @@ $(document).on('click', '#save', () => {
 
 });
 
-if (localStorage.getItem('favDrinkName') !== null) {
-	$favoriteName = localStorage.getItem('favDrinkName')
-	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
-	$favoriteImage = localStorage.getItem('favDrinkPic')
-	$favoriteID = localStorage.getItem('favDrinkID')
-	$('.favoriteName').empty()
-	const $h4 = $('<h4>').text($favoriteName)
-	// const $p = $('<p>').text($favoriteRecipe)
-	const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
-	$('.favoriteName').append($h4)
-	$('.favoriteName').append($img)
-	// $('.favoriteName').append($p)
-	$('.favorite').css('display', 'block')
-} else {
-	$('.favorite').css('display', 'none')
-}
+
 
 // //event listener for show favorite recipe
 // $(document).on('click', '#see-favorite', () => {
