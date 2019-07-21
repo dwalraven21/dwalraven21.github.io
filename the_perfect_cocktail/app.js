@@ -464,27 +464,27 @@ $('#see-favorite').on('click', () => {
 
 
 				//Tried to make this more dry by making it a function, but it wouldn't work.
-				if (data.drinks[0].strIngredient1.length > 0) {
+				if (data.drinks[0].strIngredient1 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient1)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient2.length > 0) {
+				if (data.drinks[0].strIngredient2 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient2)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient3.length > 0) {
+				if (data.drinks[0].strIngredient3 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient4.length > 0) {
+				if (data.drinks[0].strIngredient4 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient4)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient5.length > 0) {
+				if (data.drinks[0].strIngredient5 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient5)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient6.length > 0) {
+				if (data.drinks[0].strIngredient6 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient6)
 						$ul.append($drinkIngredient)
 					}
