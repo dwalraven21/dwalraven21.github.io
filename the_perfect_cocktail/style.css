@@ -129,6 +129,7 @@ button:hover {
 	background-color: white;
 	height: auto;
 	width: 100%;
+	max-width: 400px;
 	border-radius: 2px;
 	line-height: 12px;
 	padding: 2px;
@@ -256,8 +257,8 @@ button:hover {
 .liquor {
 	display: flex;
 	flex-flow: column wrap;
-	width: 35%:
-	height: 500px;
+	width: 30%:
+	height: 300px;
 	background-color: white;
 	margin-right: -1px;
 	margin-bottom: 30px;
@@ -357,7 +358,7 @@ button:hover {
 	#modal-textbox {
 		width: 550px;
 	}
-	
+
 	#modal-text > h3{
 			color: #000;
 		}
