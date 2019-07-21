@@ -36,7 +36,7 @@ h1 {
 	color: #fff;
 	margin: 0 auto;
 	padding: 10px;
-	font-size: 60px;
+	font-size: 50px;
 }
 
 h2 {
@@ -354,6 +354,10 @@ button:hover {
 		width: 800;
 	}
 
+	#modal-textbox {
+		width: 550px;
+	}
+	
 	#modal-text > h3{
 			color: #000;
 		}
