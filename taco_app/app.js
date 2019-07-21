@@ -162,6 +162,7 @@ $(document).on('click', '#favorite', () => {
 	localStorage.setItem('recipe', $allRecipes)
 	$favoriteRecipeName = localStorage.getItem('recipeName')
 	$favoriteRecipe = localStorage.getItem('recipe')
+	$('.favoriteName').empty()
 	const $p = $('<p>').text($favoriteRecipeName)
 	$('.favoriteName').append($p)
 	$('.display_favorite_taco').css('display', 'block')
@@ -475,6 +476,16 @@ $('.expand').on('click', () => {
 						console.log(error);
 				})
 	})
+
+	if (localStorage.getItem('recipeName').length > 0) {
+		$favoriteRecipeName = localStorage.getItem('recipeName')
+		$favoriteRecipe = localStorage.getItem('recipe')
+		const $p = $('<p>').text($favoriteRecipeName)
+		$('.favoriteName').empty()
+		$('.favoriteName').append($p)
+		$('.display_favorite_taco').css('display', 'block')
+	}
+
 
 //=> AirTables Hurts My Brain. Maybe for the next project
 	  // $.ajax(
