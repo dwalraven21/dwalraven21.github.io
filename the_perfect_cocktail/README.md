@@ -1,6 +1,6 @@
 # The Perfect Cocktail
 
-The Perfect Cocktail is an app that allows users to select their liquor of choice or a non-alcoholic option and then generate a random cocktail recipe based on their preference.
+The Perfect Cocktail is a website that allows users to select their liquor of choice or a non-alcoholic option and then generate a random cocktail recipe based on their preference.
 
 Link to live site: https://dwalraven21.github.io/the_perfect_cocktail/index.html
 
@@ -15,7 +15,7 @@ Photo credit goes to <a href="https://unsplash.com/@arobj">Adam Jaime</a>,
 and
 <a href="https://unsplash.com/@foodbymars" >Alison Marras</a>
 
-I used data from <a href="https://www.thecocktaildb.com/api.php" >The Cocktail DB API</a>, which contains recipes and photos for hundreds of cocktails and allows for filter by type of liquor, which was essential for this project. For their Patreon supporters, this API also has an option for filtering by multiple ingredients at once. If I wanted to improve this app in the future, I might contribute, so as to have access to this feature. I would then allow the user to select favorite ingredients in addition to favorite liquor.
+I used data from <a href="https://www.thecocktaildb.com/api.php" >The Cocktail DB API</a>, which contains recipes and photos for hundreds of cocktails and allows for filter by type of liquor, which was essential for this project. For their Patreon supporters, this API also has an option for filtering by multiple ingredients at once. If I wanted to improve this website in the future, I might contribute, so as to have access to this feature. I would then allow the user to select favorite ingredients in addition to favorite liquor.
 
 
 ## Usage
@@ -31,7 +31,7 @@ To make this more user-friendly, one improvement I might make is having a button
 
 One interesting challenge was that when you used the API filter for a specific type of liquor, it only returned objects with name of the drink, the photo and the drink ID. In order to get the full list of ingredients and the recipe, I had to save the drink ID, and then do another data pull for that drink to return the those objects.
 
-Another challenge was that in order to make the app randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (In the future I might include a drop-down under whisky with each category and filter by those.) I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length), but had an error with that for some reason.
+Another challenge was that in order to randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (In the future I might include a drop-down under whisky with each category and filter by those.) I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length), but had an error with that for some reason.
 
 ```JavaScript
 $('#generateVodka').on('click', () => {
@@ -82,4 +82,4 @@ etc...
 
 Then when I went back to populate the Favorite Drink recipe, I had to use a slightly different version of this. Definitely not DRY.
 
-Finally, I was slightly limited with this API in that I could only filter by one ingredient, so I choose types of liquor. If I was willing to contribute on Patreon, I could have filtered by multiple ingredients. I think that would have added another level to the app. I really like the idea of having the user choose their liquor and then their favorite ingredients (lime, mint, ginger, etc.). I could even change the purpose to be "Drink recipes based on what you already have in your kitchen".
+Finally, I was slightly limited with this API in that I could only filter by one ingredient, so I choose types of liquor. If I was willing to contribute on Patreon, I could have filtered by multiple ingredients. I think that would have added another level to the website. I really like the idea of having the user choose their liquor and then their favorite ingredients (lime, mint, ginger, etc.). I could even change the purpose to be "Drink recipes based on what you already have in your kitchen".

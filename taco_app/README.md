@@ -1,6 +1,6 @@
 # Mex-and-Match
 
-Mex-and-Match is an app that generates different recipes for each component of a taco and allows you to mix and match them to form your perfect taco recipe. Take your taco game to the next level!
+Mex-and-Match is a website that generates different recipes for each component of a taco and allows you to mix and match them to form your perfect taco recipe. Take your taco game to the next level!
 
 Link to live site: https://dwalraven21.github.io/taco_app/index.html
 
@@ -22,7 +22,7 @@ When users land on the page, they can click the, "Generate New Taco", button. Th
 
 Once the user is happy with their taco, they can print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example the asian cabbage slaw, to print.
 
-There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate. I also was able to utilize local storage to allow the user to save their favorite taco recipe. The app will remeber the favorite one and populate it at the top of the page so you can access it any time. If the user finds a new favorite they can update their favorite taco too.
+There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate. I also was able to utilize local storage to allow the user to save their favorite taco recipe. The website will remember the favorite one and populate it at the top of the page so you can access it any time. If the user finds a new favorite they can update their favorite taco too.
 
 Some other fun features include a carousel, featuring taco photos and modals, which pop up when the user choses to print a recipe.
 
