@@ -17,8 +17,6 @@ dark-green: #79C72A;
 aquamarine: #8DFAC3 */
 
 
-
-
 body {
 	background-color: #000;
 	font-family: 'Montserrat', sans-serif;
@@ -116,12 +114,21 @@ button:hover {
   box-shadow: 1px 1px #FFAD60;
   color: white;
 }
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+
+
+}
 /* ======= CAROUSEL SECTION ======== */
 
 .button-div {
 	width: 100%;
   display: flex;
   justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
 .carousel-container {
@@ -196,6 +203,21 @@ button:hover {
 	line-height: 30px;
 
 }
+
+.display_favorite_taco {
+  display: none;
+	flex-flow: column nowrap;
+	margin: 10px auto;
+	width: 80%;
+  justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+	line-height: 30px;
+	color: #fff;
+
+}
+
 
 .display-full-name {
   display: none;

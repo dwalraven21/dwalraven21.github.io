@@ -18,7 +18,7 @@
 		</script>
 	</head>
 	<body>
-		// This should help make the page more mobile-friendly
+	<!-- This should help make the page more mobile-friendly -->
 	<meta name=”viewport” content=”width=device-width, initial-scale=1″>
 <!-- =========== MODAL ======== -->
 <div id="modal">
@@ -31,13 +31,13 @@
 		</div>
 	</div>
 <!-- =========== CONTAINER ======== -->
-		<div class="container">
+	<div class="container">
 <!-- =========== HEADER ======== -->
 			<div class="header">
 				<!-- Page Title -->
 				<h1>Mex-and-Match</h1>
 				<!-- Subtitle -->
-				<h2>Take your taco game to the next level with this recipe generator! Design the taco of your dreams, then print your favorite recipes.</h2>
+				<h2>Take your taco game to the next level with this recipe generator! Design the taco of your dreams, then print or your favorite recipes.</h2>
 <!-- =========== CAROUSEL CONTAINER ======== -->
 				<div class="carousel-container">
 					<!-- previous button -->
@@ -60,16 +60,27 @@
 				</div>
 
 <!-- =========== DISPLAY TACO NAME ======== -->
+<div class="display_favorite_taco">
+<h3>Your Favorite Recipe:</h3>
+	<div class="favoriteName">
+	</div>
+<div class="view-favorite-recipe">
+	<button type="button" name="button" id="print-favorite">Print Favorite Recipes</button>
+</div>
+</div>
 <div class="display-full-name">
-<h3>Your Taco Is:</h3>
+<h3>Your New Taco Is:</h3>
 </div>
 			<div class="button-div">
 				<button type="button" name="button" id="generate-taco">Generate New Taco</button>
 				<div class="favorite">
 					<button type="button" name="button" id="print-all">Print All Recipes</button>
 				</div>
-				<!-- <div class="favorite">
+				<div class="favorite">
 					<button type="button" name="button" id="favorite">Save As Favorite</button>
+				</div>
+				<!-- <div class="view-favorite">
+					<button type="button" name="button" id="view-favorite">View Favorite Recipes</button>
 				</div> -->
 				<div class="expand">
 					<button type="button" name="button" id="expand">Expand / Close All</button>
@@ -89,6 +100,7 @@
 							<button type="button" name="button" class='show-recipe' id='show-base-button'>Show Recipe</button>
 							<button type="button" name="button" class='new-recipe' id='new-base-button'>Try A Different Base</button>
 							<button type="button" name="button" class='print' id='print-base'>Print Recipe</button>
+
 						</div>
 
 
@@ -144,7 +156,7 @@
 				<p>Photo credit goes to <a href="https://unsplash.com/@alexandermils" target="_blank">Alexander Mils
 				</a>, <a href="https://unsplash.com/@taiscaptures" target="_blank">Tai's Captures</a>, <a href="https://unsplash.com/@christine_siracusa" target="_blank">Christine Siracusa</a> and <a href="https://unsplash.com/@edgarraw" target="_blank">Edgar Castrejon</a></p>
 				<p>This app was created with data from the API: <a href="https://github.com/evz/tacofancy-api" target="_blank">tacofancy</a> .</p>
-
+			</div>
 </div>
 	</body>
 </html>

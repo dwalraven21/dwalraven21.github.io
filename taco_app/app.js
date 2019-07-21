@@ -5,7 +5,6 @@ $(() => {
 //================================
 // Functions
 //================================
-
 // Allows button to expand and close all recipes at once
 
 const expandAll = () => {
@@ -17,7 +16,6 @@ const expandAll = () => {
 		$('.show-recipe').text("Show Recipe")
 	}
 }
-
 
 // Function to show or hide the recipe for the associated Button.
 // Takes two parameters: the id for the recipe you want to display or hide and the id for the button that generates a new recipe for that specific type of ingredient. e.g. ('#base-recipe', '#new-base-button')
@@ -65,7 +63,7 @@ const $advanceCarousel = () => {
 setInterval(function(
 	){
 	$('.next').click()
-	},2000)
+},4000)
 
 // Event handler to open the modal
 const openModal = () => {
@@ -99,23 +97,30 @@ const populateModalPrintAll = () => {
 	$('#modal-text').prepend($h3)
 }
 
+const populateFavoriteModal = () => {
+	const $h3 = $('<h3>').text($favoriteRecipeName)
+	const $p = $('<p>').text($favoriteRecipe)
+	$('#modal-text').empty()
+	$('#modal-text').prepend($p)
+	$('#modal-text').prepend($h3)
+}
+
 //================================
 // GLOBAL VARS
 //================================
+
 //counter var to keep track of the current image index
 let currentIndex = 0
-
 // current image Element
 let $currentImg = $('.carousel-images').children().eq(currentIndex)
-
 let numOfImages = $('.carousel-images').children().length - 1
-
 //next button
 const $next = $('.next')
-
 //previous button
 const $previous = $('.previous')
 
+
+//names the full taco
 let $displayName = $('<p>')
 
 // names of all the taco componants
@@ -143,14 +148,37 @@ const $closePrint = $('.close');
 
 let $modalText = $("#modal-text")
 
+//vars to help user store a favorite recipe
+let $favoriteRecipe = '';
+let $favoriteRecipeName = '';
 //================================
 // Event Listeners & Handlers
 //================================
 
+//Save new taco to favorite taco and display Favorite
+$(document).on('click', '#favorite', () => {
+	localStorage.clear();
+	localStorage.setItem('recipeName', $displayName.text())
+	localStorage.setItem('recipe', $allRecipes)
+	$favoriteRecipeName = localStorage.getItem('recipeName')
+	$favoriteRecipe = localStorage.getItem('recipe')
+	const $p = $('<p>').text($favoriteRecipeName)
+	$('.favoriteName').append($p)
+	$('.display_favorite_taco').css('display', 'block')
+
+});
+
+
 // Tried to set up a function to advance carousel after 2 seconds
 // setTimeout($advanceCarousel(), 2000);
 
-//Event Listeners
+//print favorite recipes
+$('#print-favorite').on('click', () => {
+	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
+	populateFavoriteModal()
+	openModal()
+
+});
 //print all recipes
 $('#print-all').on('click', () => {
 	// function to populate the modal with a h1 that equals the name of recipe and a p that contains the full recipe
@@ -207,7 +235,6 @@ $(document).on('click', '#close', () => {
 $(document).on('click', '#confirm-print', () => {
 	window.print();
 })
-
 
 
 // Advances carousel when next button is clicked
@@ -448,4 +475,21 @@ $('.expand').on('click', () => {
 						console.log(error);
 				})
 	})
+
+//=> AirTables Hurts My Brain. Maybe for the next project
+	  // $.ajax(
+	  //   {
+	  //     url: 'https://api.airtable.com/v0/applhpubOTCieAGet/Table%201/recqhnwyeO2mK8ojB',
+	  //     headers: {Authorization: "Bearer keyAKIpJ2HOwEqMZM"}
+	  //   }
+	  // ).then((data) => {
+	  //   $favoriteRecipe = data.fields.recipe
+		// 	$favoriteRecipeName = data.fields.recipe_name
+		// 	$favoriteRecipeType = data.fields.recipe_type
+		// 	$contributer = data.fields.contributer
+		//
+		// 	console.log(data);
+	  // })
+
+
 })
