@@ -22,15 +22,15 @@ When users land on the page, they can click the, "Generate New Taco", button. Th
 
 Once the user is happy with their taco, they can print out all the recipes on one page. If they prefer, they can just select the one recipe they want, for example the asian cabbage slaw, to print.
 
-There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate.
+There are also buttons that allow the user to hide or reveal each recipe, as some of them can be quite long and take up a lot of screen real estate. I also was able to utilize local storage to allow the user to save their favorite taco recipe. The app will remeber the favorite one and populate it at the top of the page so you can access it any time. If the user finds a new favorite they can update their favorite taco too.
 
-Some other fun features include a carousel, featuring taco photos (the carousel can be navigated with left and right arrow buttons, but it also advances each time the user generates a new taco) and modals, which pop up when the user choses to print a recipe.
+Some other fun features include a carousel, featuring taco photos and modals, which pop up when the user choses to print a recipe.
 
 ## Challenges
 
 This was my first solo project using an API, but luckily, I found that <a href="https://github.com/evz/tacofancy-api">TacoFancy</a> was well documented and extremely easy to work with. My only suggestion would be that the author could have an object key, "protein", that contains "beef", "pork", "fish", "vegetarian" etc., as this would have allowed me to filter the recipes in some way. I originally had the idea to ask the user what protein they wanted first, but there was no realistic way for me to return recipes based on the protein source, given that the data didn't include a protein object.
 
-One of the trickiest problems for me to solve was how to make the full taco description dynamic, so that every time the user changed one single component, the description at the top would reflect that change, without updating the other components. I accomplished this by making the recipe names  global variables, and concatenating those variables in the sentence. That way, each time I requested another data pull, for say a condiment, I could make it so just the one variable was being updated.
+One of the trickiest problems for me to solve was how to make the full taco description dynamic, so that every time the user changed one single component, the description at the top would reflect that change, without updating the other components. I accomplished this by making the recipe names global variables, and concatenating those variables in the sentence. That way, each time I requested another data pull, for say a condiment, I could make it so just the one variable was being updated.
 
 
 ```JavaScript
