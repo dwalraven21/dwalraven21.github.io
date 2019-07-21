@@ -13,6 +13,7 @@ console.log("up and running!");
 	const openModal = () => {
 		$modal.css('display', 'block');
 		$('#generateRecipe').show()
+		$('#save').show()
 
 	}
 	// Function to close the modal
