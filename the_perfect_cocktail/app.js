@@ -21,6 +21,8 @@ console.log("up and running!");
 		$('#modal-ingredients').empty()
 		$('#modal-recipe').empty()
 		$('#modal-text').empty()
+		$('#save').hide()
+
 
 	}
 
@@ -33,6 +35,22 @@ console.log("up and running!");
 			$('#modal-text').prepend($img)
 			$('#modal-text').prepend($h3)
 	}
+
+
+	const populateFavoriteModal = () => {
+		const $h3 = $('<h3>').text($favoriteName)
+		// const $p = $('<p>').text($favoriteRecipe)
+		const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
+		$('#modal-text').empty()
+		$('#modal-recipe').empty()
+		$('#modal-text').append($h3)
+		$('#modal-text').append($img)
+		// $('#modal-text').append($p)
+		$('#generateRecipe').css('display', 'none')
+		$('#save').css('display', 'none')
+		$('.favorite').css('display', 'block')
+
+}
 
 	const addIngredients = (ingredient) => {
 		if (data.drinks[0].ingredient.length > 0) {
@@ -66,6 +84,7 @@ console.log("up and running!");
 
 let $drinkIngredient = '';
 let $drinkRecipe = '';
+let $drinkID = '';
 
 // Variables we'll need to populate the modal. Pulling these from our API
 // let $drinkName = '';
@@ -90,9 +109,61 @@ const $modalText = $("#modal-text");
 // //previous button
 // const $previous = $('.previous')
 
+// //=========== Favorites ========
+//vars to help user store a favorite recipe
+let $favoriteName = '';
+let $favoriteRecipe = '';
+let $favoriteImage = '';
+let $favoriteID = '';
+
 //================================
 // Event Listeners
 //================================
+
+//Save new drink to favorite and display favorite
+$(document).on('click', '#save', () => {
+	localStorage.clear();
+	localStorage.setItem('favDrinkName', $drinkName)
+	localStorage.setItem('favDrinkRecipe', $drinkRecipe)
+	localStorage.setItem('favDrinkPic', $drinkImage)
+	localStorage.setItem('favDrinkID', $drinkId)
+	$favoriteName = localStorage.getItem('favDrinkName')
+	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
+	$favoriteImage = localStorage.getItem('favDrinkPic')
+	$favoriteID = localStorage.getItem('favDrinkID')
+	$('.favoriteName').empty()
+	const $h4 = $('<h4>').text($favoriteName)
+	// const $p = $('<p>').text($favoriteRecipe)
+	const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
+	$('.favoriteName').append($h4)
+	$('.favoriteName').append($img)
+	// $('.favoriteName').append($p)
+	$('.favorite').css('display', 'block')
+	closeModal()
+
+});
+
+if (localStorage.getItem('favDrinkName').length > 0) {
+	$favoriteName = localStorage.getItem('favDrinkName')
+	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
+	$favoriteImage = localStorage.getItem('favDrinkPic')
+	$favoriteID = localStorage.getItem('favDrinkID')
+	$('.favoriteName').empty()
+	const $h4 = $('<h4>').text($favoriteName)
+	// const $p = $('<p>').text($favoriteRecipe)
+	const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
+	$('.favoriteName').append($h4)
+	$('.favoriteName').append($img)
+	// $('.favoriteName').append($p)
+	$('.favorite').css('display', 'block')
+	}
+
+// //event listener for show favorite recipe
+// $(document).on('click', '#see-favorite', () => {
+// 	$drinkId = $favoriteID
+// 	populateFavoriteModal()
+// 	openModal()
+// })
 
 //Add event listener to Close button
 $(document).on('click', '#close', () => {
@@ -118,7 +189,7 @@ $('#generateVodka').on('click', () => {
 
 			// console.log(data.drinks.length) => 81
 
-			let index = (Math.floor(Math.random() * 82))
+			let index = (Math.floor(Math.random() * 81))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -146,9 +217,9 @@ $('#generateGin').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length) => 93
+			// console.log(data.drinks.length)
 
-			let index = (Math.floor(Math.random() * 94))
+			let index = (Math.floor(Math.random() * 93))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -175,10 +246,10 @@ $('#generateRum').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length) => 17
+			// console.log(data.drinks.length)
 
 
-			let index = (Math.floor(Math.random() * 18))
+			let index = (Math.floor(Math.random() * 17))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -205,9 +276,9 @@ $('#generateTequila').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length) => 24
+			// console.log(data.drinks.length)
 
-			let index = (Math.floor(Math.random() * 25))
+			let index = (Math.floor(Math.random() * 24))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -234,9 +305,9 @@ $('#generateWhiskey').on('click', () => {
 		}).then(
 			(data)=>{
 
-			// console.log(data.drinks.length); => 12
+			// console.log(data.drinks.length);
 
-			let index = (Math.floor(Math.random() * 13))
+			let index = (Math.floor(Math.random() * 12))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -267,7 +338,7 @@ $('#generateNA').on('click', () => {
 
 			// console.log(data.drinks.length); => 58
 
-			let index = (Math.floor(Math.random() * 59))
+			let index = (Math.floor(Math.random() * 58))
 
 			$drinkName = (data.drinks[index].strDrink);
 			$drinkImage = (data.drinks[index].strDrinkThumb)
@@ -368,10 +439,13 @@ $('#generateRecipe').on('click', () => {
 				const $h5 = $('<h4>').text("Recipe")
 				$('#modal-recipe').append($h5)
 
+				$('#generateRecipe').hide()
+				$('#save').show()
+
 				$drinkRecipe = (data.drinks[0].strInstructions)
 				$('#modal-recipe').append($drinkRecipe)
 
-				$('#generateRecipe').hide()
+
 
 			},
 		(error)=>{
@@ -379,6 +453,108 @@ $('#generateRecipe').on('click', () => {
 		})
 
 })
+
+
+//Generate a drink recipe by clicking on the name of the liquor that you want in your drink
+$('#see-favorite').on('click', () => {
+
+		$.ajax({
+			url:'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + $favoriteID,
+			type: 'GET',
+      dataType: 'json'
+
+		}).then(
+			(data)=>{
+
+				populateFavoriteModal()
+
+				$('#modal-ingredients').empty()
+				const $h4 = $('<h4>').text("Ingredients")
+				$('#modal-ingredients').append($h4)
+				const $ul = $('<ul>')
+				$('#modal-ingredients').append($ul)
+
+
+				//Tried to make this more dry by making it a function, but it wouldn't work.
+				if (data.drinks[0].strIngredient1.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient1)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient2.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient2)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient3.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient4.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient4)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient5.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient5)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient6.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient6)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient7.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient7)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient8.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient8)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient9.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient9)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient10.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient10)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient11.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient11)
+						$('#modal-ingredients').append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient12.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient12)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient13.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient13)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient14.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient14)
+						$ul.append($drinkIngredient)
+					}
+				if (data.drinks[0].strIngredient15.length > 0) {
+						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient15)
+						$ul.append($drinkIngredient)
+					}
+
+				$('#modal-recipe').empty()
+				const $h5 = $('<h4>').text("Recipe")
+				$('#modal-recipe').append($h5)
+
+
+				$drinkRecipe = (data.drinks[0].strInstructions)
+				$('#modal-recipe').append($drinkRecipe)
+
+				$modal.css('display', 'block');
+
+			},
+		(error)=>{
+				console.log(error);
+		})
+
+})
+
+
 
 
 // //=========== CAROUSEL ========

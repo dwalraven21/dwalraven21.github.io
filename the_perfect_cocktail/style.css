@@ -32,7 +32,7 @@ a {
 h1 {
 	text-align: center;
 	font-family: 'Special Elite', cursive;
-	background-color: #731810;
+	background-color: #591708;
 	color: #fff;
 	margin: 0 auto;
 	padding: 10px;
@@ -237,8 +237,39 @@ button:hover {
 	padding: 0 10px;
 	margin: 0 auto;
 }
-/*  =========== MAIN ======== */
 
+/*  =========== Favorite ======== */
+
+.favorite {
+	display: none;
+	text-align: center;
+
+}
+
+.favoriteName > h4{
+	color: #fff;
+	font-size: 25px;
+	align-self: center;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+#see-favorite {
+	width: 150px;
+}
+
+
+#save {
+	display: none;
+}
+
+#favDrinkImage {
+	width: 150px;
+	height: 150px;
+}
+
+/*  =========== MAIN ======== */
 .main {
 	margin: 5px -1px;
 	display: flex;
@@ -248,6 +279,8 @@ button:hover {
 	margin: 5px -1px;
 }
 
+
+/*  =========== Flexbox ======== */
 .flex-box {
 	display: flex;
 	justify-content: space-around;
@@ -259,7 +292,7 @@ button:hover {
 	flex-flow: column wrap;
 	justify-content: flex-start;
 	align-items: center;
-	background-color: #343840;
+	background-color: #591708;
 	margin-bottom: 30px;
 	width: 38%;
 
@@ -325,6 +358,7 @@ button:hover {
 
 	h3 {
 		font-size: 30px;
+		line-height: 35px;
 		color: #A68256;
 	}
 
@@ -336,7 +370,7 @@ button:hover {
 		width: 30%;
 		max-height: 300px;
 		max-width: 210px;
-		background-color: #731810;
+		background-color: #591708;
 	}
 
 	.liquor > img {
@@ -344,8 +378,6 @@ button:hover {
 		max-height: 210px;
 		max-width: 210px;
 	}
-
-
 
 	.banner {
 		height: 300px;
@@ -391,7 +423,6 @@ button:hover {
 	#generateNA {
 		font-size: 16px;
 	}
-
 
 
 }
