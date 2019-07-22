@@ -35,7 +35,7 @@ One interesting challenge was that when you used the API filter for a specific t
 	url:'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + $drinkId
 ```
 
-Another challenge was that in order to randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (In the future I might include a drop-down under whisky with each category and filter by those.) I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length), but had an error with that for some reason.
+<!-- Another challenge was that in order to randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (In the future I might include a drop-down under whisky with each category and filter by those.) I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length), but had an error with that for some reason.
 
 ```JavaScript
 
@@ -67,7 +67,7 @@ Another challenge was that in order to randomize a drink, I had to use the Math.
 			})
 	})
 
-```
+``` -->
 Another challenge I had was listing the ingredients. Some recipes had no ingredients listed, some had as many as 15 and each ingredient was stored as a separate object, so I had to check 15 object keys and only return the values that existed. I tried to make this a function at first, to make my code as DRY as possible, but I couldn't make it run properly within the ajax function. I'm sure there's a way to do it, but for the time being I wrote code that looked something like this:
 
 ```JavaScript
