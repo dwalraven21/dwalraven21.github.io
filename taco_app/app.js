@@ -477,7 +477,7 @@ $('.expand').on('click', () => {
 				})
 	})
 
-	if (localStorage.getItem('recipeName').length > 0) {
+	if (localStorage.getItem('recipeName') !== null) {
 		$favoriteRecipeName = localStorage.getItem('recipeName')
 		$favoriteRecipe = localStorage.getItem('recipe')
 		const $p = $('<p>').text($favoriteRecipeName)
