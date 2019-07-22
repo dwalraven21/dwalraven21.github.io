@@ -31,52 +31,59 @@ To make this more user-friendly, one improvement I might make is having a button
 
 One interesting challenge was that when you used the API filter for a specific type of liquor, it only returned objects with name of the drink, the photo and the drink ID. In order to get the full list of ingredients and the recipe, I had to save the drink ID, and then do another data pull for that drink to return the those objects.
 
+```JavaScript
+	url:'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=' + $drinkId
+```
+
 Another challenge was that in order to randomize a drink, I had to use the Math.random() function and then store that as a variable to use as the array index, however, not all liquors had the same number of drink recipes. Vodka and Gin had nearly 100 each, but Whiskey had two, so I ended up using the term "Bourbon" instead. (In the future I might include a drop-down under whisky with each category and filter by those.) I console logged the length of each of these arrays, to determine the range of random numbers to use for the index. I tried replacing the number with (data.drinks.length), but had an error with that for some reason.
 
 ```JavaScript
-$('#generateVodka').on('click', () => {
 
-		$.ajax({
-			url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka',
-			type: 'GET',
-      dataType: 'json'
+	//Generate a drink recipe by clicking on the name of the liquor that you want in your drink
+	$('#generateVodka').on('click', () => {
 
-		}).then(
-			(data)=>{
+			$.ajax({
+				url:'https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka',
+				type: 'GET',
+				dataType: 'json'
 
-			// console.log(data.drinks.length); => 81
+			}).then(
+				(data)=>{
 
-			let index = (Math.floor(Math.random() * 82))
+				// console.log(data.drinks.length) => 81
 
-			$drinkName = (data.drinks[index].strDrink);
-			$drinkImage = (data.drinks[index].strDrinkThumb)
-			$drinkId = (data.drinks[index].idDrink)
+				let index = (Math.floor(Math.random() * 81))
 
-			populateModal()
-			openModal()
+				$drinkName = (data.drinks[index].strDrink);
+				$drinkImage = (data.drinks[index].strDrinkThumb)
+				$drinkId = (data.drinks[index].idDrink)
 
-			},
-		(error)=>{
-				console.log(error);
-		})
+				populateModal()
+				openModal()
 
-})
+				},
+			(error)=>{
+					console.log(error);
+			})
+	})
+
 ```
 Another challenge I had was listing the ingredients. Some recipes had no ingredients listed, some had as many as 15 and each ingredient was stored as a separate object, so I had to check 15 object keys and only return the values that existed. I tried to make this a function at first, to make my code as DRY as possible, but I couldn't make it run properly within the ajax function. I'm sure there's a way to do it, but for the time being I wrote code that looked something like this:
 
 ```JavaScript
-				if (data.drinks[0].strIngredient1.length > 0) {
-						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient1)
-						$ul.append($drinkIngredient)
-					}
-				if (data.drinks[0].strIngredient2.length > 0) {
-						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient2)
-						$ul.append($drinkIngredient)
-					}
-				if (data.drinks[0].strIngredient3.length > 0) {
-						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
-						$ul.append($drinkIngredient)
-					}					
+//Tried to make this more dry by making it a function, but it wouldn't work.
+if (data.drinks[0].strIngredient1 !== null) {
+		$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient1)
+		$ul.append($drinkIngredient)
+	}
+if (data.drinks[0].strIngredient2 !== null) {
+		$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient2)
+		$ul.append($drinkIngredient)
+	}
+if (data.drinks[0].strIngredient3 !== null) {
+		$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
+		$ul.append($drinkIngredient)
+	}	
 ```
 etc...
 
