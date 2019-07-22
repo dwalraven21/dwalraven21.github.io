@@ -80,7 +80,7 @@ dl {
 
 dt {
 	font-family: 'Henny Penny', cursive;
-	font-size: 30px;
+	font-size: 20px;
 	background-color: #C4FA8D;
 	width: 100%;
 	align-self: center;
@@ -89,8 +89,8 @@ dt {
 }
 
 dd {
-	font-size: 20px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 25px;
 }
 
 button {
@@ -99,10 +99,9 @@ button {
   background: #FFAD60;
   color: #000;
   padding: 10px;
-  border-radius: .5;
   text-align: center;
   box-shadow: 1px 1px #C4FA8D
-	font-size: 22px;
+	font-size: 25px;
 	margin: 10px;
 	border: 1px solid black;
 	cursor: pointer;
@@ -199,8 +198,8 @@ button:hover {
 	margin: 5px auto 0 auto;
 	padding: 10px 20px;
 	border: 1px solid black;
-	font-size: 25px;
-	line-height: 30px;
+	font-size: 18px;
+	line-height: 25px;
 
 }
 
