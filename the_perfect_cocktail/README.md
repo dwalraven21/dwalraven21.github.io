@@ -117,3 +117,8 @@ if (localStorage.getItem('favDrinkName') !== null) {
 ```
 
 Finally, I was slightly limited with this API in that I could only filter by one ingredient, so I choose types of liquor. If I was willing to contribute on Patreon, I could have filtered by multiple ingredients. I think that would have added another level to the website. I really like the idea of having the user choose their liquor and then their favorite ingredients (lime, mint, ginger, etc.). I could even change the purpose to be "Drink recipes based on what you already have in your kitchen".
+
+```
+Filter by multi-ingredient (only available to $1+ Patreon supporters)
+https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Dry_Vermouth,Gin,Anis
+```
