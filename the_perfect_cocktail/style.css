@@ -77,6 +77,7 @@ ul {
 }
 
 li {
+	list-style: none;
 	font-size: 25px;
 	line-height: 35px;
 	text-align: left;
@@ -164,59 +165,6 @@ button:hover {
 	text-align: center;
 }
 
-/* #modal-ingredients {
-	text-align: center;
-	width: 100px;
-
-} */
-
-/* ======= CAROUSEL SECTION ======== */
-
-/* .button-div {
-	width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.carousel-container {
-  width: 100%;
-	max-width: 600px;
-  display: flex;
-  justify-content: center;
-	margin: 0 auto;
-}
-.carousel-images {
-  width: 100%;
-  background: #A68256;
-  padding: 10px;
-  box-sizing: border-box;
-  box-shadow: 2px 2px #731810;
-}
-.carousel-images img {
-  width: 100%;
-	display: none;
-}
-
-.carousel-images img:first-of-type {
-	display: block;
-}
-
-.carousel-button {
-  align-self: center;
-  background: #A68256;
-  color: #000;
-  padding: 10px;
-  border-radius: 50%;
-  text-align: center;
-  box-shadow: 1px 1px #731810;
-	margin: 10px;
-}
-.carousel-button:hover {
-  cursor: pointer;
-  background: #731810;
-  box-shadow: 1px 1px #59381B;
-  color: white;
-} */
 
 /*  =========== HEADER ======== */
 .banner {

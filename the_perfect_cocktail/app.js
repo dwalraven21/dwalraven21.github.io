@@ -2,8 +2,6 @@ $(() => {
 console.log("up and running!");
 
 
-//I commented out the carousel code, because I decided to try a different style for the header. I may go back later and make the new a header a carousel. Just in case I want to put the carousel back in, I decided to keep the code.
-
 //================================
 // Functions
 //================================
@@ -60,24 +58,6 @@ console.log("up and running!");
 		}
 	}
 
-//=========== CAROUSEL ========
-// //Function to advance the carousel of images
-// const $advanceCarousel = () => {
-// 		// current image to hide
-// 		$currentImg.hide()
-// 		//check if the currentIndex is at or below the number of images. If not, reset to zero.
-// 		if (currentIndex < numOfImages) {
-// 			//we want the next image to show
-// 			//increment current image currentIndex
-// 			currentIndex++
-// 		} else {
-//
-// 			currentIndex = 0
-// 		}
-// 		//change the $currentImg
-// 		$currentImg = $('.carousel-images').children().eq(currentIndex)
-// 		$currentImg.show()
-// 	}
 
 //================================
 // GLOBAL VARS
@@ -99,16 +79,6 @@ const $modal = $('#modal');
 const $closeModal = $('#close');
 const $modalText = $("#modal-text");
 
-// //=========== CAROUSEL ========
-// //counter var to keep track of the current image index
-// let currentIndex = 0
-// // current image Element
-// let $currentImg = $('.carousel-images').children().eq(currentIndex)
-// let numOfImages = $('.carousel-images').children().length - 1
-// //next button
-// const $next = $('.next')
-// //previous button
-// const $previous = $('.previous')
 
 // //=========== Favorites ========
 //vars to help user store a favorite recipe
@@ -145,13 +115,6 @@ $(document).on('click', '#save', () => {
 });
 
 
-
-// //event listener for show favorite recipe
-// $(document).on('click', '#see-favorite', () => {
-// 	$drinkId = $favoriteID
-// 	populateFavoriteModal()
-// 	openModal()
-// })
 
 //Add event listener to Close button
 $(document).on('click', '#close', () => {
@@ -235,7 +198,6 @@ $('#generateRum').on('click', () => {
 			(data)=>{
 
 			// console.log(data.drinks.length)
-
 
 			let index = (Math.floor(Math.random() * 17))
 
@@ -362,78 +324,76 @@ $('#generateRecipe').on('click', () => {
 
 
 				//Tried to make this more dry by making it a function, but it wouldn't work.
-				if (data.drinks[0].strIngredient1.length > 0) {
+				if (data.drinks[0].strIngredient1 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient1)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient2.length > 0) {
+				if (data.drinks[0].strIngredient2 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient2)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient3.length > 0) {
+				if (data.drinks[0].strIngredient3 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient4.length > 0) {
+				if (data.drinks[0].strIngredient4 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient4)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient5.length > 0) {
+				if (data.drinks[0].strIngredient5 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient5)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient6.length > 0) {
+				if (data.drinks[0].strIngredient6 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient6)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient7.length > 0) {
+				if (data.drinks[0].strIngredient7 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient7)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient8.length > 0) {
+				if (data.drinks[0].strIngredient8 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient8)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient9.length > 0) {
+				if (data.drinks[0].strIngredient9 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient9)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient10.length > 0) {
+				if (data.drinks[0].strIngredient10 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient10)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient11.length > 0) {
+				if (data.drinks[0].strIngredient11 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient11)
 						$('#modal-ingredients').append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient12.length > 0) {
+				if (data.drinks[0].strIngredient12 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient12)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient13.length > 0) {
+				if (data.drinks[0].strIngredient13 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient13)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient14.length > 0) {
+				if (data.drinks[0].strIngredient14 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient14)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient15.length > 0) {
+				if (data.drinks[0].strIngredient15 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient15)
 						$ul.append($drinkIngredient)
 					}
-
 				$('#modal-recipe').empty()
-				const $h5 = $('<h4>').text("Recipe")
-				$('#modal-recipe').append($h5)
+				if (data.drinks[0].strInstructions !== null){
+					const $h5 = $('<h4>').text("Recipe")
+					$('#modal-recipe').append($h5)
+					$drinkRecipe = (data.drinks[0].strInstructions)
+					$('#modal-recipe').append($drinkRecipe)
+				}
 
 				$('#generateRecipe').hide()
 				$('#save').show()
-
-				$drinkRecipe = (data.drinks[0].strInstructions)
-				$('#modal-recipe').append($drinkRecipe)
-
-
 
 			},
 		(error)=>{
@@ -488,50 +448,51 @@ $('#see-favorite').on('click', () => {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient6)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient7.length > 0) {
+				if (data.drinks[0].strIngredient7 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient7)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient8.length > 0) {
+				if (data.drinks[0].strIngredient8 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient8)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient9.length > 0) {
+				if (data.drinks[0].strIngredient9 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient9)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient10.length > 0) {
+				if (data.drinks[0].strIngredient10 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient10)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient11.length > 0) {
+				if (data.drinks[0].strIngredient11 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient11)
 						$('#modal-ingredients').append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient12.length > 0) {
+				if (data.drinks[0].strIngredient12 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient12)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient13.length > 0) {
+				if (data.drinks[0].strIngredient13 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient13)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient14.length > 0) {
+				if (data.drinks[0].strIngredient14 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient14)
 						$ul.append($drinkIngredient)
 					}
-				if (data.drinks[0].strIngredient15.length > 0) {
+				if (data.drinks[0].strIngredient15 !== null) {
 						$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient15)
 						$ul.append($drinkIngredient)
 					}
 
-				$('#modal-recipe').empty()
-				const $h5 = $('<h4>').text("Recipe")
-				$('#modal-recipe').append($h5)
+					$('#modal-recipe').empty()
 
-
-				$drinkRecipe = (data.drinks[0].strInstructions)
-				$('#modal-recipe').append($drinkRecipe)
+					if (data.drinks[0].strInstructions !== null) {
+						const $h5 = $('<h4>').text("Recipe")
+						$('#modal-recipe').append($h5)
+						$drinkRecipe = (data.drinks[0].strInstructions)
+						$('#modal-recipe').append($drinkRecipe)
+					}
 
 				$modal.css('display', 'block');
 
@@ -563,29 +524,5 @@ if (localStorage.getItem('favDrinkName') !== null) {
 	$('.favorite').css('display', 'none')
 }
 
-
-
-// //=========== CAROUSEL ========
-// // Advances carousel when next button is clicked
-// $next.on('click', () => {
-// 	$advanceCarousel();
-// })
-//
-// $previous.on('click', () => {
-// 	// we want the current image to hide
-// 	$currentImg.hide()
-// 	//check if the currentIndex is at or below the number of images. If not, reset to zero.
-// 	if (currentIndex !== 0) {
-// 		//we want the next image to show
-// 		//increment current image currentIndex
-// 		currentIndex--
-// 	} else {
-//
-// 		currentIndex = numOfImages
-// 	}
-// 	//change the $currentImg
-// 	$currentImg = $('.carousel-images').children().eq(currentIndex)
-// 	$currentImg.show()
-// })
 
 })
