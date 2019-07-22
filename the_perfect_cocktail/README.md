@@ -83,10 +83,37 @@ if (data.drinks[0].strIngredient2 !== null) {
 if (data.drinks[0].strIngredient3 !== null) {
 		$drinkIngredient = $('<li>').text(data.drinks[0].strIngredient3)
 		$ul.append($drinkIngredient)
-	}	
+	}
 ```
 etc...
 
 Then when I went back to populate the Favorite Drink recipe, I had to use a slightly different version of this. Definitely not DRY.
+
+Also, in order to use local storage, I had to make sure that I added a function that checked to see if there was anything stored on page load and then, if so, populate the Favorite Drink area with that information.
+
+```JavaScript
+
+//check local storage to see if a favorite exists
+//if it does then display it
+//if not, don't display this section yet
+
+if (localStorage.getItem('favDrinkName') !== null) {
+	$favoriteName = localStorage.getItem('favDrinkName')
+	$favoriteRecipe = localStorage.getItem('favDrinkRecipe')
+	$favoriteImage = localStorage.getItem('favDrinkPic')
+	$favoriteID = localStorage.getItem('favDrinkID')
+	$('.favoriteName').empty()
+	const $h4 = $('<h4>').text($favoriteName)
+	// const $p = $('<p>').text($favoriteRecipe)
+	const $img = $('<img>').attr('src', $favoriteImage).attr('id', 'favDrinkImage')
+	$('.favoriteName').append($h4)
+	$('.favoriteName').append($img)
+	// $('.favoriteName').append($p)
+	$('.favorite').css('display', 'block')
+} else {
+	$('.favorite').css('display', 'none')
+}
+
+```
 
 Finally, I was slightly limited with this API in that I could only filter by one ingredient, so I choose types of liquor. If I was willing to contribute on Patreon, I could have filtered by multiple ingredients. I think that would have added another level to the website. I really like the idea of having the user choose their liquor and then their favorite ingredients (lime, mint, ginger, etc.). I could even change the purpose to be "Drink recipes based on what you already have in your kitchen".
