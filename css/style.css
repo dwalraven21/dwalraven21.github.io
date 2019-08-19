@@ -1,10 +1,20 @@
 /* Custom Stylesheet */
-/**
- * Use this file to override Materialize files so you can update
- * the core Materialize files in the future
- *
- * Made By MaterializeCSS.com
- */
+/* ==================
+      VARIABLES
+================== */
+:root {
+--black: #0A0D0C;
+--dark-tan: #a6a59c;
+--light-tan: #BFBDB4;
+--hunter-green: rgb(76, 89, 88);
+--forest-green: rgb(100, 131, 104);
+--brown: #735840;
+--body-font: 'Open Sans', sans-serif;
+--title-font: 'Lobster Two', cursive;
+}
+/* ==================
+      GENERAL
+================== */
 
 nav ul a,
 nav .brand-logo {
@@ -14,7 +24,12 @@ nav .brand-logo {
 p {
   line-height: 2rem;
 }
-
+.brand-logo {
+	font-family: var(--title-font)
+}
+.logo-img {
+	width: 250px;
+}
 .sidenav-trigger {
   color: #26a69a;
 }
