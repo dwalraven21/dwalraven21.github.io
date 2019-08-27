@@ -1,0 +1,97 @@
+/* ==================
+      VARIABLES
+================== */
+:root {
+--hot-pink: #BF498A;
+--navy: #052F40;
+--light-gray: #D0D3D9;
+--dark-gray: #72808C;
+--mint: #B4D9A3;
+--kelly-green: #4caf50;
+--body-font: 'Hepta Slab', serif;
+--title-font: 'Miltonian', cursive;
+--title-font-filled: 'Miltonian Tattoo', cursive;
+}
+
+/* * {
+	border: 1px solid gold;
+} */
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+	font-family: var(--body-font);
+	color: var(--dark-gray);
+
+  }
+
+  main {
+    flex: 1 0 auto;
+	text-align: center;
+  }
+
+
+  h1 {
+	font-size: 75px;
+	 letter-spacing: 10px;
+	 margin: 0 auto;
+  }
+
+
+
+  h1, h2, h3, h4 {
+	  font-family: var(--title-font);
+	  letter-spacing: 10px;
+	  color: var(--kelly-green);
+  }
+
+  h5 {
+	  font-family: var(--title-font-filled);
+	  color: black;
+  }
+
+  p {
+	  font-family: var(--body-font);
+	  color: black;
+	  font-size: 20px;
+  }
+
+  a {
+	font-family: var(--kelly-green);
+ 	color: black;
+  }
+
+  a:hover {
+	 font-size: 30px;
+  }
+
+  .parallax{
+    position:static;
+  }
+
+  .fab, .far {
+	  font-size: 30px;
+	  padding: 5px;
+  }
+
+  .fab:hover, .far:hover  {
+	  font-size: 40px;
+	  padding: 5px;
+	  margin: 5px;
+  }
+
+.skills {
+	width: 200px;
+	padding: 10px;
+}
+
+  #logo {
+	  width: 200px;
+	  margin: 0;
+	  padding: 0;
+  }
+
+  #small-logo {
+	  width: 50px;
+  }
