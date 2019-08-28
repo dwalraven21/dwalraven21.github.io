@@ -3,6 +3,9 @@
 	<head>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="Online Portfolio of Danielle Walraven, a Full-Stack Developer from the Washington D.C. Metro Area.">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--Import Google Icon Font-->
 	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<!-- Compiled and minified CSS -->
@@ -52,14 +55,21 @@
 			  <div class="nav-wrapper green lighten-2">
 				<a href="#" class="brand-logo">Dani Walraven</a>
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
-				  <li><a href="#about">About</a></li>
-				  <li><a href="#projects">Projects</a></li>
-				  <li><a href="#skills">Skills</a></li>
-				  <li><a href="#resume">Resume</a></li>
+				  <li><a class="waves-effect"href="#about">About</a></li>
+				  <li><a class="waves-effect"href="#projects">Projects</a></li>
+				  <li><a class="waves-effect" href="#skills">Skills</a></li>
+				  <li><a class="waves-effect" href="#resume">Resume</a></li>
 				</ul>
+				<a href="#" data-target="slide-out" class="sidenav-trigger button-collapse right"><i class="material-icons white-text">menu</i></a>
 			  </div>
 			</nav>
-		</div>
+			</div>
+			<ul id="slide-out" class="sidenav">
+				<li><a href="#about">About</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#resume">Resume</a></li>
+			</ul>
 		</header>
 		<main>
 		<!-- Main Content -->
@@ -67,10 +77,11 @@
 			<div class="container">
 				<img id="logo" src="images/dani-logo.png">
 				<h1 id="about" class="header black-text">Hello!</h1>
-				<p>I'm Danielle &mdash; A Full-Stack Developer from Northern Virginia.<br> I have a passion for building user-centered, intuitively functional applications.</p><br><br>
+				<p>I'm Danielle &mdash; A Full-Stack Developer from Northern Virginia. I have a passion for building user-centered, intuitively functional applications. My expertise is in building full CRUD apps with the MEAN stack (MongoDB/Mongoose, Express.js, AngularJS, and Node.js), but I also have experience with Ruby on Rails, React, SQL (MySQL and postgreSQL), and more. I love to learn new things! Check out some of my work below.</p><br><br>
+				 <a href="#parallax"><i class="material-icons medium">details</i></a>
 			</div>
 		 </div>
-		<div class="parallax-container">
+		<div id="parallax" class="parallax-container">
 	      <div class="parallax"><img src="images/workspace2.jpg"></div>
 	    </div>
 		</div>
@@ -80,148 +91,112 @@
 	      </div>
 	    </div>
 		<div class="container">
-			<div class="row">
-			   <div class="col s12 m6 xl4">
-				   <div class="card">
-				      <div class="card-image waves-effect waves-block waves-light">
-				        <img class="activator" src="images/background1.jpg">
-				      </div>
-				      <div class="card-content">
-				        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				      </div>
-				      <div class="card-reveal">
-				        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				      </div>
-				    </div>
-			   </div>
- 			   <div class="col s12 m6 xl4">
-				   <div class="card">
-				      <div class="card-image waves-effect waves-block waves-light">
-				        <img class="activator" src="images/background1.jpg">
-				      </div>
-				      <div class="card-content">
-				        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				      </div>
-				      <div class="card-reveal">
-				        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				      </div>
-				    </div>
- 			   </div>
- 			   <div class="col s12 m6 xl4">
- 				 <div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/background1.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				    </div>
-				  </div>
- 			   </div>
-			   <div class="col s12 m6 xl4">
- 				 <div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/background1.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				    </div>
-				  </div>
- 			   </div>
-			   <div class="col s12 m6 xl4">
- 				 <div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/background1.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				    </div>
-				  </div>
- 			   </div>
-			   <div class="col s12 m6 xl4">
- 				 <div class="card">
-				    <div class="card-image waves-effect waves-block waves-light">
-				      <img class="activator" src="images/background1.jpg">
-				    </div>
-				    <div class="card-content">
-				      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-				    </div>
-				    <div class="card-reveal">
-				      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-				      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-				    </div>
-				  </div>
- 			   </div>
- 		 </div>
+			<div class="row masonry-grid">
+              <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="https://daniellewalraven.com/taco_app/index.html"><img src="http://g.recordit.co/wdh9MpwYzs.gif"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="https://daniellewalraven.com/the_perfect_cocktail/index.html"><img src="http://g.recordit.co/vquRG6pi7G.gif"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="https://creative-logic.herokuapp.com"><img src="http://g.recordit.co/k5nVYvPQqN.gif"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="https://my-tiny-home.herokuapp.com"><img src="http://g.recordit.co/CmeCrH651r.gif"></a>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="#"><img src="http://placehold.it/600x400"></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="card fade-in-out up-in-out" data-duration="0">
+                  <div class="card-image">
+                    <a target="_blank" href="#"><img src="http://placehold.it/600x400"></a>
+                  </div>
+                </div>
+              </div> -->
+            </div>
 		</div>
 		<div class="section blue-grey lighten-4">
 			<div class="container">
 				<h1 id="skills" class="header black-text">Skills</h1><br><br>
-				<div class="row">
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/html.png" alt="html">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/css.png" alt="css">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/js-logo.png" alt="javascript">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/jquery.png" alt="jquery">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/expressjs.png" alt="express">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/node.png" alt="nodejs">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/react.png" alt="react">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/angular.png" alt="angularjs">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/bootstrap.png" alt="bootstrap">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/materialize.png" alt="materialize">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/mongodb.png" alt="MongoDB">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/mysql-logo.png" alt="MySql">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/sql.png" alt="SQL">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/postgres.svg.png" alt="postgres">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/ruby.png" alt="ruby on rails">
-					</div>
-					<div class="col s12 m6 xl4">
-						<img class="skills" src="images/python.png" alt="Python">
-					</div>
-					<div class="col s12 m6 xl4">
+				<div class="row staggered-transition-wrapper" data-duration="0" data-staggereddelay=".9">
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
 						<img class="skills" src="images/github.png" alt="GitHUb">
 					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/html.png" alt="html">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/css.png" alt="css">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/js-logo.png" alt="javascript">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/jquery.png" alt="jquery">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/expressjs.png" alt="express">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/node.png" alt="nodejs">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/react.png" alt="react">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/redux.png" alt="redex">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/angular.png" alt="angularjs">
+					</div>
+
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/mongodb.png" alt="MongoDB">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/mysql-logo.png" alt="MySql">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/sql.png" alt="SQL">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/postgres.svg.png" alt="postgres">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/ruby.png" alt="ruby on rails">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/python.png" alt="Python">
+					</div>
+
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/bootstrap.png" alt="bootstrap">
+					</div>
+					<div class="col s12 m6 xl4 fade-in-out up-in-out" data-duration="0">
+						<img class="skills" src="images/materialize.png" alt="materialize">
+					</div>
+
 			  </div>
 			</div>
 		 </div>
@@ -243,8 +218,8 @@
 				<ul>
 					<li class="black-text">(703) 725-2258</li>
 	  				<li><a target="_blank" href="mailto:dwalraven21@gmail.com">dwalraven21@gmail.com</a></li>
-					<li class="black-text">20772 Rainsboro Dr.</li>
-					<li class="black-text">Ashburn, VA 20147</li>
+					<!-- <li class="black-text">20772 Rainsboro Dr.</li>
+					<li class="black-text">Ashburn, VA 20147</li> -->
 				</ul>
               </div>
               <div class="col l4 offset-l2 s12">
@@ -270,8 +245,18 @@
         </footer>
 		<!-- JavaScript -->
 	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	    <script src="js/materialize.min.js"></script>
+		<script src="js/app.js"></script>
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<!-- External libraries -->
+	    <script src="js/imagesloaded.pkgd.min.js"></script>
+	    <script src="js/masonry.pkgd.min.js"></script>
+	    <script src="js/TweenMax.min.js"></script>
+	    <script src="js/ScrollMagic.min.js"></script>
+	    <script src="js/animation.gsap.min.js"></script>
+	    <!-- Initialization script -->
+	    <script src="js/startup.js"></script>
+	    <script src="js/init.js"></script>
 	  </body>
 	</html>

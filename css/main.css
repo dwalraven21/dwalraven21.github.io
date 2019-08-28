@@ -63,7 +63,7 @@
   }
 
   a:hover {
-	 font-size: 30px;
+	 font-size: 110%;
   }
 
   .parallax{
@@ -82,8 +82,17 @@
   }
 
 .skills {
+	width: 150px;
+	padding: 10px;
+}
+
+.skills:hover {
 	width: 200px;
 	padding: 10px;
+}
+
+.brand-logo:hover{
+	font-size: 110%;
 }
 
   #logo {
