@@ -91,6 +91,10 @@
 	padding: 10px;
 }
 
+.brand-logo{
+	margin: 0 15px;
+}
+
 .brand-logo:hover{
 	font-size: 110%;
 }
