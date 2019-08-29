@@ -23,12 +23,18 @@
     flex-direction: column;
 	font-family: var(--body-font);
 	color: var(--dark-gray);
+	/* margin: 0; */
+	align-content: center;
+	margin: 0 auto;
 
   }
 
   main {
     flex: 1 0 auto;
 	text-align: center;
+	/* margin: 0;
+	width: 100%;
+	align-self: center; */
   }
 
 
@@ -66,6 +72,11 @@
 	 font-size: 110%;
   }
 
+/* .container {
+	width: 100%;
+	align-self: center;
+	margin: 0;
+} */
   .parallax{
     position:static;
   }
