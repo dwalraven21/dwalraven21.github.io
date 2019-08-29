@@ -95,6 +95,10 @@
 	margin: 0 15px;
 }
 
+.dani-logo {
+	width: 100px;
+}
+
 .brand-logo:hover{
 	font-size: 110%;
 }
