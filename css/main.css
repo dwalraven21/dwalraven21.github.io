@@ -6,8 +6,8 @@
 --navy: #052F40;
 --light-gray: #D0D3D9;
 --dark-gray: #72808C;
---mint: #B4D9A3;
---kelly-green: #4caf50;
+--mint: rgb(163, 202, 217);
+--kelly-green: #4c98af;
 --body-font: 'Hepta Slab', serif;
 --title-font: 'Miltonian', cursive;
 --title-font-filled: 'Miltonian Tattoo', cursive;
